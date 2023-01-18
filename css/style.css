@@ -5,8 +5,14 @@
     --color-green: #6D9E99;
     --color-yellow: #FFE779;
     --color-red: #FF4E67;
-}
 
+    --font-title: 'Montserrat Subrayada';
+    --font-body: 'Montserrat';
+}
+html {
+    font-size: 62.5%;
+    /* font-size: 100%; */
+}
 body {
     margin: 0;
     padding: 0;
@@ -17,24 +23,199 @@ a {
 }
 
 #header {
+    z-index: 2;
     position: fixed;
+    width: 100%;
     top: 0;
     background-color: var(--color-light-beige);
     display: flex;
-}
-#header header h1 {
-    font-family: 'Syncopate', sans-serif;
-}
-#header nav ul {
-    display: flex;
     align-items: center;
 }
+#header #nameHeader {
+    width: min(20%, 150px);
+}
+#header #nameHeader h1 {
+    font-family: var(--font-title), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+}
+#header nav {
+    width: 90%;
+}
+#header nav #navComputer {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#header nav li {
+    padding-left: min(10%, 100px);
+}
 
-#firstPage {
+#header nav li a {
+    font-family: var(--font-body), sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-black);
+}
+#header nav #navMobile {
+    display: none;
+}
+@media (max-width: 426px) {
+    html {
+        font-size: 40%;
+    }
+    #header nav #navComputer {
+        display: none;
+    }
+    #header nav #navMobile {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5px;
+        font-size: 1.4rem;
+        color: var(--color-black)
+    }
+}
+
+
+main #firstPage {
+    position: relative;
     width: 100%;
     height: 100vh;
     background-color: var(--color-light-beige);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* border: 1px solid red; */
+}
+main #firstPage #titleFirstPage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* border: 1px solid darkgreen; */
+}
+main #firstPage #titleFirstPage h2 {
+    font-family: var(--font-title), sans-serif;
+    font-weight: 700;
+    font-size: 12rem;
+    text-shadow: 6px 6px 3px gray;
+    margin: 0;
+
+    /* border: 1px solid green; */
+}
+main #firstPage #titleFirstPage p {
+    font-family: var(--font-body), sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+    text-align: center;
+    margin: 0;
+
+    /* border: 1px solid green; */
+}
+main #firstPage #imgFirstPage {
+    width: 50%;
+    height: auto;
+
+    /* border: 1px solid blue;  */
+}
+
+main #firstPage #socialNetworks {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+main #firstPage .socialNetwork {
+    color: var(--color-black);
+    font-size: 8rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    main #firstPage {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main #firstPage #titleFirstPage {
+        width: 90%;
+    }
+    main #firstPage #imgFirstPage {
+        width: min(90%, 500px);
+    }
+}
+
+
+
+
+
+
+main #maBio {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+
+    /* border: 1px solid blue; */
+}
+main #maBio h2 {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-50%);
+
+    font-size: 5rem;
+    color: var(--color-black);
+    font-family: var(--font-title), sans-serif;
+    font-weight: 700;
+}
+
+main #mesProjets {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-light-beige);
+}
+main #mesProjets h2 {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-50%);
+
+    font-size: 5rem;
+    color: var(--color-black);
+    font-family: var(--font-title), sans-serif;
+    font-weight: 700;
+}
+
+
+
+main #meContacter {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+main #meContacter h2 {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-50%);
+
+    font-size: 5rem;
+    color: var(--color-black);
+    font-family: var(--font-title), sans-serif;
+    font-weight: 700;
 }

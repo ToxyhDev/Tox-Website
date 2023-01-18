@@ -7,34 +7,41 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Tox Dev-Web</title>
 </head>
 <body>
     <!-- NOM + MENU -->
-    <div id="header">
-        <header>
-            <h1>Tox</h1>
-        </header>
+    <header id="header">
+        <div id="nameHeader">
+            <h1>TOX</h1>
+        </div>
         <nav>
-            <ul>
+            <div id="navMobile">
+                <span class="fa fa-bars"></span>
+            </div>
+            <ul id="navComputer">
                 <li><a href="#">MA BIO</a></li>
                 <li><a href="#">MES PROJETS</a></li>
                 <li><a href="#">ME CONTACTER</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
     <main>
         <!-- FIRST PAGE -->
         <header id="firstPage">
-            <h2>TOX</h2>
-            <p>Dev WEB Junior en full autodidacte</p>
+            <div id="titleFirstPage">
+                <h2>TOX</h2>
+                <p>Dev WEB Junior 
+                <br>en full autodidacte</p>
+            </div>
+            <div id="imgFirstPage">
+                <img src="images/img-firstPage.svg" alt="Image d'un developpeur">
+            </div>
 
-            <img src="" alt="Image d'un developpeur">
-
-            <div id="socialNetworks">
+            <section id="socialNetworks">
                 <a id="instagram" class="socialNetwork" href="http://" target="_blank">
                     <i class="fa fa-instagram"></i>
                 </a>
@@ -44,17 +51,21 @@
                 <a id="github" class="socialNetwork" href="http://" target="_blank">
                     <i class="fa fa-github"></i>
                 </a>
-            </div>
+            </section>
         </header>
 
         <!-- MA BIO -->
         <section id="maBio">
-
+            <h2>MA BIO</h2>
         </section>
 
         <!-- MES PROJETS -->
         <section id="mesProjets">
+            <h2>MES PROJETS</h2>
+        </section>
 
+        <section id="meContacter">
+            <h2>ME CONTACTER</h2>
         </section>
 
 
