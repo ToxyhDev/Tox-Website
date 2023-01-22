@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Tox Dev-Web</title>
 </head>
 <body>
@@ -20,14 +20,42 @@
         </div>
         <nav>
             <div id="navMobile">
-                <span class="fa fa-bars"></span>
+                <section id="socialNetworks">
+                    <a id="instagram" class="socialNetwork" href="http://" target="_blank">
+                        <img src="images/icons-instagram.svg" alt="">
+                    </a>
+                    <a id="twitter" class="socialNetwork" href="http://" target="_blank">
+                        <img src="images/icons-twitter.svg" alt="">
+                    </a>
+                    <a id="github" class="socialNetwork" href="http://" target="_blank">
+                        <img src="images/icons-github.svg" alt="">
+                    </a>
+                </section>
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
             </div>
-            <ul id="navComputer">
-                <li><a href="#">MA BIO</a></li>
-                <li><a href="#">MES PROJETS</a></li>
-                <li><a href="#">ME CONTACTER</a></li>
-            </ul>
+            <div id="navComputer">
+                <ul>
+                    <li><a href="#">MA BIO</a></li>
+                    <li><a href="#">MES PROJETS</a></li>
+                    <li><a href="#">ME CONTACTER</a></li>
+                </ul>
+                <section id="socialNetworks">
+                    <a id="instagram" class="socialNetwork" href="http://" target="_blank">
+                        <img src="images/icons-instagram.svg" alt="">
+                    </a>
+                    <a id="twitter" class="socialNetwork" href="http://" target="_blank">
+                        <img src="images/icons-twitter.svg" alt="">
+                    </a>
+                    <a id="github" class="socialNetwork" href="http://" target="_blank">
+                        <img src="images/icons-github.svg" alt="">
+                    </a>
+                </section>
+            </div>
+
         </nav>
+
     </header>
     <main>
         <!-- FIRST PAGE -->
@@ -41,22 +69,22 @@
                 <img src="images/img-firstPage.svg" alt="Image d'un developpeur">
             </div>
 
-            <section id="socialNetworks">
-                <a id="instagram" class="socialNetwork" href="http://" target="_blank">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a id="twitter" class="socialNetwork" href="http://" target="_blank">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a id="github" class="socialNetwork" href="http://" target="_blank">
-                    <i class="fa fa-github"></i>
-                </a>
-            </section>
+
         </header>
 
         <!-- MA BIO -->
         <section id="maBio">
             <h2>MA BIO</h2>
+
+            <div id="blobPc" class="blobSection">
+                <img class="imgBlob" src="images/illustration-blob-pc.svg" alt="">
+                <p>Je me suis formé en autodidacte sur le site d'OpenClassrooms sur les langages HTML, CSS et JavaScript.</p>
+            </div>
+
+            <div id="blobCible" class="blobSection">
+                <img class="imgBlob" src="images/illustration-blob-cible.svg" alt="">
+                <p>Avec les bases enseignées je fais en sorte de réaliser le plus possible de nouveau projet afin de chercher à approfondir mes connaissances.</p>
+            </div>
         </section>
 
         <!-- MES PROJETS -->
