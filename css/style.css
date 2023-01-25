@@ -389,10 +389,7 @@ main #mesProjets #carousselProjet .projets {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-
-
-
-    
+ 
 }
 main #mesProjets #carousselProjet .projets h3 {
     font-size: 3rem;
@@ -437,11 +434,8 @@ main #mesProjets #carousselProjet .projets a {
 @media screen and (max-width: 425px) {
     main #mesProjets #carousselProjet {
         position: absolute;
-        top: 50%;
-        right: 50%;
         width: 100%;
         height: 70%;
-        transform: translate(50%, -50%);
         
         display: flex;
         flex-direction: row;
