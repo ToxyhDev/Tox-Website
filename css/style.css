@@ -27,10 +27,10 @@ a {
     font-weight: normal;
     color: var(--color-black);
 }
-h1, h2, h3 {
+h1, h2 {
     font-family: var(--font-title), sans-serif;
 }
-p, a {
+h3, p, a {
     font-family: var(--font-body), sans-serif;
 }
 
@@ -67,7 +67,7 @@ p, a {
     /* border: 1px solid blue; */
 }
 #header nav {
-    width: 90%;
+    width: 100%;
 
     /* border: 1px solid blue; */
 }
@@ -103,11 +103,13 @@ header #socialNetworks {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* border: 1px solid red; */
 }
 header .socialNetwork {
     display: flex;
     height: 3.2em;
-
+    padding-right: min(1vw, 10px);
 
     /* border: 1px solid red; */
 }
@@ -126,6 +128,8 @@ header .socialNetwork {
         display: flex;
         justify-content: flex-end;
         font-size: 1.4rem;
+
+        /* border: 1px solid red; */
     }
 }
 /* #header {
@@ -262,6 +266,7 @@ main #maBio .blobSection p {
 }
 main #maBio .imgBlob {
     width: 30rem;
+    filter: drop-shadow(4px 4px 8px var(--color-light-grey));
 }
 @media screen and (max-width: 425px) {
     html {
@@ -270,6 +275,8 @@ main #maBio .imgBlob {
     main #maBio h2 {
         position: relative;
         transform: rotate(0deg);
+        top: 0;
+
     }
     main #maBio .blobSection {
         flex-direction: column;
@@ -281,10 +288,6 @@ main #maBio .imgBlob {
     }
     
 }
-/* 
-main #maBio {
-    display: none;
-} */
 
 
 
@@ -298,6 +301,10 @@ main #mesProjets {
     background-repeat: repeat-y;
     background-position: top right;
     background-size: 30%;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 main #mesProjets h2 {
     position: absolute;
@@ -309,6 +316,166 @@ main #mesProjets h2 {
 
     font-size: 5rem;
     font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+    main #mesProjets {
+        background-image: url(../images/patternpadMobileGrey.svg);
+        background-repeat: no-repeat;
+        background-size: 130vh;
+        background-position: bottom;
+    }
+}
+@media screen and (max-width: 425px) {
+    main #mesProjets h2 {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+        text-align: center;
+
+        /* border: 1px solid red; */
+    }
+
+}
+
+main #mesProjets #carousselProjet {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 70%;
+    height: 100%;
+    transform: translate(50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    gap: 5rem;
+
+    /* border: 1px solid green; */
+
+    -ms-text-overflow-style: none;
+}
+#carousselProjet::-webkit-scrollbar {
+    display: none;
+}
+
+main #mesProjets .projets:first-child {
+    margin-top: 10%;
+}
+main #mesProjets .projets:last-child {
+    margin-bottom: 10%;
+}
+
+main #mesProjets #carousselProjet .projets {
+    flex: 0 0 60%;
+    padding: 4rem;
+
+    border: 0px solid var(--color-black);
+    border-radius: 4rem;
+    /* background-color: var(--color-light-beige); */
+    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    background-image: linear-gradient(-60deg,  
+    rgba(109,158,153,1) 0%, 
+    rgba(156,149,146,1) 30%, 
+    rgba(156,149,146,1) 60%,
+    rgba(255,231,121,1) 100%);
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+
+    
+}
+main #mesProjets #carousselProjet .projets h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    background-color: var(--color-green);
+    border: 0.5rem solid var(--color-black);
+    border-radius: 4rem;
+    padding: 1.5rem;
+    margin: 0;
+
+
+}
+main #mesProjets #carousselProjet .descProjet {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /* border: 1px solid red; */
+
+}
+main #mesProjets #carousselProjet .descProjet p {
+    font-size: 3.5rem;
+    overflow: hidden;
+
+}
+main #mesProjets #carousselProjet .imgDescProjet {
+    width: 15vw;
+    height: 100%;
+    margin-right: 10%;
+}
+main #mesProjets #carousselProjet .projets a {
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: var(--color-yellow);
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    border: 0.5rem solid var(--color-black);
+    border-radius: 3rem;
+    margin-left: 100%;
+    transform: translate(-100%);
+}
+@media screen and (max-width: 425px) {
+    main #mesProjets #carousselProjet {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 100%;
+        height: 70%;
+        transform: translate(50%, -50%);
+        
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+    
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 5rem;
+    
+        /* border: 1px solid green; */
+    }
+    main #mesProjets .projets:first-child {
+        margin: 0;
+        margin-left: 10%;
+    }
+    main #mesProjets .projets:last-child {
+        margin: 0;
+        margin-right: 10%;
+    }
+    main #mesProjets #carousselProjet .descProjet {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        /* border: 1px solid red; */
+    
+    }
+    main #mesProjets #carousselProjet .imgDescProjet {
+        width: 35vw;
+        height: auto;
+        margin-right: 0;
+    }
+
 }
 
 
