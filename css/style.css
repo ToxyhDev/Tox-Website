@@ -276,6 +276,7 @@ main #maBio .imgBlob {
         position: relative;
         transform: rotate(0deg);
         top: 0;
+        padding-top: 1rem;
 
     }
     main #maBio .blobSection {
@@ -331,6 +332,7 @@ main #mesProjets h2 {
         top: 0;
         left: 0;
         transform: rotate(0deg);
+        padding-top: 1rem;
         text-align: center;
 
         /* border: 1px solid red; */
@@ -404,15 +406,17 @@ main #mesProjets #carousselProjet .projets h3 {
 }
 main #mesProjets #carousselProjet .descProjet {
     width: 90%;
+    height: 80%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     /* border: 1px solid red; */
 
 }
 main #mesProjets #carousselProjet .descProjet p {
-    font-size: 3.5rem;
+    /* font-size: 3.5rem; */
+    font-size: clamp(1rem, 6vw, 3.5rem);
     overflow: hidden;
 
 }
@@ -447,6 +451,12 @@ main #mesProjets #carousselProjet .projets a {
     
         /* border: 1px solid green; */
     }
+    main #mesProjets #carousselProjet .projets {
+        flex: 0 0 70%;
+        padding: 3rem 2rem 3rem 2rem;
+        
+     
+    }
     main #mesProjets .projets:first-child {
         margin: 0;
         margin-left: 10%;
@@ -456,12 +466,12 @@ main #mesProjets #carousselProjet .projets a {
         margin-right: 10%;
     }
     main #mesProjets #carousselProjet .descProjet {
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     
-        /* border: 1px solid red; */
     
     }
     main #mesProjets #carousselProjet .imgDescProjet {
