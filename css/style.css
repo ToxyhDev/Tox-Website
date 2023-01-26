@@ -9,7 +9,8 @@
     --color-red: #FF4E67;
 
     /* --font-title: 'Montserrat Subrayada'; */
-    --font-title: 'Archivo Black';
+    /* --font-title: 'Archivo Black'; */
+    --font-title: 'Unbounded', sans-serif;
     --font-body: 'Montserrat';
 }
 
@@ -58,8 +59,8 @@ h3, p, a {
     width: min(20%, 150px);
 }
 #header #nameHeader h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 900;
     text-align: center;
     letter-spacing: 2px;
     margin: 0;
@@ -149,6 +150,7 @@ main #firstPage {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
 
 }
@@ -163,7 +165,7 @@ main #firstPage #titleFirstPage {
 
 }
 main #firstPage #titleFirstPage h2 {
-    font-weight: 700;
+    font-weight: 900;
     font-size: 12rem;
     text-shadow: 6px 6px 3px gray;
     margin: 0;
@@ -233,6 +235,7 @@ main #maBio {
     background-color: white;
     position: relative;
     overflow:hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
     display: flex;
     flex-direction: column;
@@ -260,12 +263,15 @@ main #maBio .blobSection {
 }
 main #maBio .blobSection p {
     font-size: 3.5rem;
+    padding-top: 5rem;
     padding-left: 5vw;
+    padding-bottom: 3rem;
     margin: 0;
     /* border: 1px solid red; */
 }
 main #maBio .imgBlob {
     width: 30rem;
+    padding-top: 5rem;
     filter: drop-shadow(4px 4px 8px var(--color-light-grey));
 }
 @media screen and (max-width: 425px) {
@@ -285,7 +291,6 @@ main #maBio .imgBlob {
     }
     main #maBio .blobSection p {
         text-align: center;
-        padding: 0;
     }
     
 }
@@ -302,6 +307,7 @@ main #mesProjets {
     background-repeat: repeat-y;
     background-position: top right;
     background-size: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
     /* display: flex;
     justify-content: center;
