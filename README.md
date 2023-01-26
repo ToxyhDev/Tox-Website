@@ -2,8 +2,8 @@
 I build my website.
 
 ## Fonts :
-- [Archivo Black](https://fonts.google.com/specimen/Archivo+Black?query=archivo)
-- [Montserrat](hhttps://fonts.google.com/specimen/Montserrat?query=montserrat)
+- [Unbounded](https://fonts.google.com/specimen/Unbounded)
+- [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat)
 
 ## Colors :
 - `#22272E`

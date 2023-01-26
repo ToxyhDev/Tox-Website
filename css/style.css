@@ -9,7 +9,8 @@
     --color-red: #FF4E67;
 
     /* --font-title: 'Montserrat Subrayada'; */
-    --font-title: 'Archivo Black';
+    /* --font-title: 'Archivo Black'; */
+    --font-title: 'Unbounded', sans-serif;
     --font-body: 'Montserrat';
 }
 
@@ -58,8 +59,8 @@ h3, p, a {
     width: min(20%, 150px);
 }
 #header #nameHeader h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 900;
     text-align: center;
     letter-spacing: 2px;
     margin: 0;
@@ -149,6 +150,7 @@ main #firstPage {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
 
 }
@@ -163,7 +165,7 @@ main #firstPage #titleFirstPage {
 
 }
 main #firstPage #titleFirstPage h2 {
-    font-weight: 700;
+    font-weight: 900;
     font-size: 12rem;
     text-shadow: 6px 6px 3px gray;
     margin: 0;
@@ -233,6 +235,7 @@ main #maBio {
     background-color: white;
     position: relative;
     overflow:hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
     display: flex;
     flex-direction: column;
@@ -260,12 +263,15 @@ main #maBio .blobSection {
 }
 main #maBio .blobSection p {
     font-size: 3.5rem;
+    padding-top: 5rem;
     padding-left: 5vw;
+    padding-bottom: 3rem;
     margin: 0;
     /* border: 1px solid red; */
 }
 main #maBio .imgBlob {
     width: 30rem;
+    padding-top: 5rem;
     filter: drop-shadow(4px 4px 8px var(--color-light-grey));
 }
 @media screen and (max-width: 425px) {
@@ -276,6 +282,7 @@ main #maBio .imgBlob {
         position: relative;
         transform: rotate(0deg);
         top: 0;
+        padding-top: 1rem;
 
     }
     main #maBio .blobSection {
@@ -284,7 +291,6 @@ main #maBio .imgBlob {
     }
     main #maBio .blobSection p {
         text-align: center;
-        padding: 0;
     }
     
 }
@@ -301,6 +307,7 @@ main #mesProjets {
     background-repeat: repeat-y;
     background-position: top right;
     background-size: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
     /* display: flex;
     justify-content: center;
@@ -331,6 +338,7 @@ main #mesProjets h2 {
         top: 0;
         left: 0;
         transform: rotate(0deg);
+        padding-top: 1rem;
         text-align: center;
 
         /* border: 1px solid red; */
@@ -404,15 +412,17 @@ main #mesProjets #carousselProjet .projets h3 {
 }
 main #mesProjets #carousselProjet .descProjet {
     width: 90%;
+    height: 80%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     /* border: 1px solid red; */
 
 }
 main #mesProjets #carousselProjet .descProjet p {
-    font-size: 3.5rem;
+    /* font-size: 3.5rem; */
+    font-size: clamp(1rem, 6vw, 3.5rem);
     overflow: hidden;
 
 }
@@ -447,6 +457,12 @@ main #mesProjets #carousselProjet .projets a {
     
         /* border: 1px solid green; */
     }
+    main #mesProjets #carousselProjet .projets {
+        flex: 0 0 70%;
+        padding: 3rem 2rem 3rem 2rem;
+        
+     
+    }
     main #mesProjets .projets:first-child {
         margin: 0;
         margin-left: 10%;
@@ -456,12 +472,12 @@ main #mesProjets #carousselProjet .projets a {
         margin-right: 10%;
     }
     main #mesProjets #carousselProjet .descProjet {
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     
-        /* border: 1px solid red; */
     
     }
     main #mesProjets #carousselProjet .imgDescProjet {
