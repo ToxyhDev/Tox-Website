@@ -507,44 +507,99 @@ main #meContacter h2 {
         left: 0;
         transform: rotate(0deg);
         padding-top: 1rem;
+        padding-bottom: 6rem;
         text-align: center;
 
        
     }
+    main #meContacter {
+        flex-direction: column;
+        justify-content: normal;
+    }
 
 }
 
-main #meContacter form {
+#meContacter form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 70%;
     height: 70%;
-    border: 1px solid red;
+    /* border: 1px solid green; */
+
+    --form-border: 0.4rem solid var(--color-black);
+    --form-border-raduis: 999rem;
+    --form-margin-bottom: 2rem;
+    --form-padding: 1.5rem;
 }
-main #meContacter form input, main #meContacter form select {
-    border: 4px solid var(--color-black);
-    border-radius: 20rem;
+
+form #email, form #title {
+    border: var(--form-border);
+    border-radius: var(--form-border-raduis);
+    /* height: 8%; */
+    padding: var(--form-padding);
+    margin-bottom: var(--form-margin-bottom);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 2rem;
 }
-main #meContacter form textarea {
-    border: 4px solid var(--color-black);
-    border-radius: 2rem;
-}
-main #meContacter form #email {
+form #email {
     width: 50%;
+    height: 8%;
 }
-main #meContacter form #chooseTitle, #texts {
+
+form #title {
     width: 100%;
-    padding: 1rem;
 }
-main #meContacter form #formSend {
+
+form #email::placeholder, form #title, form #texts::placeholder {
+    color: var(--color-black);
+    font-size: 2rem;
+}
+form #email:focus:valid, form #title:focus:valid, form #texts:focus:valid {
+    background-color: var(--color-green);
+    font-size: 2rem;
+    font-weight: bold;
+}
+form #email:valid, form #title:valid, form #texts:valid {
+    border-color: var(--color-green);
+    font-size: 2rem;
+}
+form #email:focus:invalid, form #title:focus:invalid, form #texts:focus:invalid {
+    background-color: var(--color-red);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form #texts {
+    border: var(--form-border);
+    border-radius: 3rem;
+    margin-bottom: var(--form-margin-bottom);
+    width: 100%;
+    height: 70%;
+    resize: none;
+    padding: var(--form-padding);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+form #formSend {
+    border: var(--form-border);
+    border-radius: var(--form-border-raduis);
     font-size: 3rem;
     font-weight: 500;
     background-color: var(--color-yellow);
     padding: 0.5rem 2.5rem 0.5rem 2.5rem;
-    border: 0.5rem solid var(--color-black);
-    border-radius: 3rem;
     margin-left: 100%;
     transform: translate(-100%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+    #meContacter form {
+        width: 95%;
+    }
 }

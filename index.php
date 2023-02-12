@@ -119,31 +119,26 @@
         <section id="meContacter">
             <h2 class="titleSection">ME CONTACTER</h2>
 
-            <form action="" method="get">
-
+            <form action="submit_contact.php" method="post">
+                <!-- EMAIL -->
                 <label for="email"></label>
-                <input type="email" name="email" id="email" placeholder="Votre @mail">
+                <input type="email" name="email" id="email" placeholder="Votre @mail" required>
 
-                <label for="title"></label>
-                <select name="chooseTitle" id="chooseTitle">
+                <!-- TITLES -->
+                <label for="tile"></label>
+                <input type="text" name="title" id="title" minlength="5" required>
+                <!-- <select name="chooseTitle" id="chooseTitle">
                     <option value="information">Demande de renseignement</option>
                     <option value="bug">J'ai rencontré un bug sur le site</option>
-                </select>
+                </select> -->
 
+                <!-- MESSAGE -->
                 <label for="texts"></label>
-                <textarea name="texts" id="texts" cols="30" rows="10" placeholder="Votre texte"></textarea>
+                <textarea name="texts" id="texts" minlength="20" maxlength="25" placeholder="Votre texte" required></textarea>
 
-                <input type="submit" value="Envoyer" id="formSend">
-                <!-- <?php
-                    if (
-                        (!isset($_GET['email']) || !filter_var($_GET['email'], FILTER_VALIDATE_EMAIL))
-                        || (!isset($_GET['message']) || empty($_GET['message']))
-                        )
-                    {
-                        echo('Il faut un email et un message valides pour soumettre le formulaire.');
-                        return;
-                }
-                ?> -->
+                <!-- SEND -->
+                <button type="submit" id="formSend">Envoyer</button>
+
             </form>
         </section>
 
