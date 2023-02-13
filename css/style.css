@@ -291,6 +291,7 @@ main #maBio .imgBlob {
     }
     main #maBio .blobSection p {
         text-align: center;
+        padding: 5rem 0.5rem 3rem 0.5rem;
     }
     
 }
@@ -376,8 +377,8 @@ main #mesProjets #carousselProjet .projets {
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
     background-image: linear-gradient(-60deg,  
     rgba(109,158,153,1) 0%, 
-    rgba(156,149,146,1) 30%, 
-    rgba(156,149,146,1) 60%,
+    rgba(156,149,146,1) 45%, 
+    rgba(156,149,146,1) 46%,
     rgba(255,231,121,1) 100%);
     
 
@@ -529,6 +530,8 @@ main #meContacter h2 {
     /* border: 1px solid green; */
 
     --form-border: 0.4rem solid var(--color-black);
+    --form-border-valid: 0.4rem solid var(--color-green);
+    --form-border-invalid: 0.4rem solid var(--color-red);
     --form-border-raduis: 999rem;
     --form-margin-bottom: 2rem;
     --form-padding: 1.5rem;
@@ -546,33 +549,12 @@ form #email, form #title {
     font-size: 2rem;
 }
 form #email {
-    width: 50%;
+    width: 70%;
     height: 8%;
 }
-
 form #title {
     width: 100%;
 }
-
-form #email::placeholder, form #title, form #texts::placeholder {
-    color: var(--color-black);
-    font-size: 2rem;
-}
-form #email:focus:valid, form #title:focus:valid, form #texts:focus:valid {
-    background-color: var(--color-green);
-    font-size: 2rem;
-    font-weight: bold;
-}
-form #email:valid, form #title:valid, form #texts:valid {
-    border-color: var(--color-green);
-    font-size: 2rem;
-}
-form #email:focus:invalid, form #title:focus:invalid, form #texts:focus:invalid {
-    background-color: var(--color-red);
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 form #texts {
     border: var(--form-border);
     border-radius: 3rem;
@@ -584,6 +566,47 @@ form #texts {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    font-size: 2rem;
+}
+#texts::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4rem;
+}
+#texts::-webkit-scrollbar-thumb {
+    background-color: var(--color-black);
+    background-clip: padding-box;
+    border: 1.5rem solid rgba(0, 0, 0, 0);
+    border-radius: 20rem;
+}
+
+/* input global */
+
+form input::placeholder, form textarea::placeholder {
+    color: var(--color-black);
+    font-weight: bold;
+}
+form #email:focus, form #title:focus, form #texts:focus {
+    outline: none;
+}
+
+/* input valid */
+form #email:focus:valid, form #title:focus:valid, form #texts:focus:valid {
+    border: var(--form-border-valid);
+}
+form #email:not(:focus):valid, form #title:not(:focus):valid, form #texts:not(:focus):valid {
+    background-color: var(--color-green);
+    font-weight: bold;
+}
+
+/* input invalid */
+form #email:focus:invalid, form #title:focus:invalid, form #texts:focus:invalid {
+    border: var(--form-border-invalid);
+    background-color: initial;
+}
+form input:not(:focus):not(:placeholder-shown):invalid, 
+form textarea:not(:focus):not(:placeholder-shown):invalid {
+    background-color: var(--color-red);
+    font-weight: bold;
 }
 
 form #formSend {
@@ -596,6 +619,7 @@ form #formSend {
     margin-left: 100%;
     transform: translate(-100%);
     cursor: pointer;
+    color: var(--color-black);
 }
 
 @media screen and (max-width: 425px) {

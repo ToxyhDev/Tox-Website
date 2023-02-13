@@ -122,11 +122,11 @@
             <form action="submit_contact.php" method="post">
                 <!-- EMAIL -->
                 <label for="email"></label>
-                <input type="email" name="email" id="email" placeholder="Votre @mail" required>
+                <input type="email" name="email" id="email" placeholder="Votre @mail*" required>
 
                 <!-- TITLES -->
                 <label for="tile"></label>
-                <input type="text" name="title" id="title" minlength="5" required>
+                <input type="text" name="title" id="title" minlength="5" placeholder="Votre titre*" required>
                 <!-- <select name="chooseTitle" id="chooseTitle">
                     <option value="information">Demande de renseignement</option>
                     <option value="bug">J'ai rencontré un bug sur le site</option>
@@ -134,8 +134,8 @@
 
                 <!-- MESSAGE -->
                 <label for="texts"></label>
-                <textarea name="texts" id="texts" minlength="20" maxlength="25" placeholder="Votre texte" required></textarea>
-
+                <textarea name="texts" id="texts" minlength="20" maxlength="2000" placeholder="Votre texte*" required></textarea>
+                <p>* Champs obligatoires</p>
                 <!-- SEND -->
                 <button type="submit" id="formSend">Envoyer</button>
 
