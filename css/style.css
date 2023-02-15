@@ -31,7 +31,7 @@ a {
 h1, h2 {
     font-family: var(--font-title), sans-serif;
 }
-h3, p, a, input, select, textarea {
+h3, p, a, input, select, textarea, button {
     font-family: var(--font-body), sans-serif;
 }
 
@@ -118,7 +118,7 @@ header .socialNetwork {
 #header nav #navMobile {
     display: none;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     html {
         font-size: 40%;
     }
@@ -196,7 +196,7 @@ main #firstPage #imgFirstPage {
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 769px){
     html {
         font-size: 50%;
     }
@@ -274,7 +274,7 @@ main #maBio .imgBlob {
     padding-top: 5rem;
     filter: drop-shadow(4px 4px 8px var(--color-light-grey));
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     html {
         font-size: 40%;
     }
@@ -325,7 +325,7 @@ main #mesProjets h2 {
     font-size: 5rem;
     font-weight: 700;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     main #mesProjets {
         background-image: url(../images/patternpadMobileGrey.svg);
         background-repeat: no-repeat;
@@ -430,7 +430,7 @@ main #mesProjets #carousselProjet .projets a {
     margin-left: 100%;
     transform: translate(-100%);
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     main #mesProjets #carousselProjet {
         position: absolute;
         width: 100%;
@@ -501,7 +501,7 @@ main #meContacter h2 {
     font-weight: 700;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     main #mesProjets h2, main #maBio h2, main #meContacter h2 {
         position: relative;
         top: 0;
@@ -526,7 +526,7 @@ main #meContacter h2 {
     justify-content: flex-start;
     align-items: flex-start;
     width: 70%;
-    height: 70%;
+    height: 80%;
     /* border: 1px solid green; */
 
     --form-border: 0.4rem solid var(--color-black);
@@ -534,31 +534,44 @@ main #meContacter h2 {
     --form-border-invalid: 0.4rem solid var(--color-red);
     --form-border-raduis: 999rem;
     --form-margin-bottom: 2rem;
+    --form-margin-bottom-texts: 0.8rem;
     --form-padding: 1.5rem;
+}
+
+form #divEmail {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+form #divEmail img {
+    width: 30%;
+    height: 14rem;
 }
 
 form #email, form #title {
     border: var(--form-border);
     border-radius: var(--form-border-raduis);
-    /* height: 8%; */
     padding: var(--form-padding);
     margin-bottom: var(--form-margin-bottom);
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     font-size: 2rem;
+    height: 6rem;
 }
 form #email {
     width: 70%;
-    height: 8%;
+    /* height: 60%; */
 }
 form #title {
     width: 100%;
+    /* height: 12%; */
 }
 form #texts {
     border: var(--form-border);
     border-radius: 3rem;
-    margin-bottom: var(--form-margin-bottom);
+    margin-bottom: var(--form-margin-bottom-texts);
     width: 100%;
     height: 70%;
     resize: none;
@@ -608,7 +621,9 @@ form textarea:not(:focus):not(:placeholder-shown):invalid {
     background-color: var(--color-red);
     font-weight: bold;
 }
-
+form p {
+    font-size: 1.2rem;
+}
 form #formSend {
     border: var(--form-border);
     border-radius: var(--form-border-raduis);
@@ -622,7 +637,7 @@ form #formSend {
     color: var(--color-black);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     #meContacter form {
         width: 95%;
     }

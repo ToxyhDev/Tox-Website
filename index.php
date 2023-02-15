@@ -120,9 +120,15 @@
             <h2 class="titleSection">ME CONTACTER</h2>
 
             <form action="submit_contact.php" method="post">
+
                 <!-- EMAIL -->
-                <label for="email"></label>
-                <input type="email" name="email" id="email" placeholder="Votre @mail*" required>
+                <div id="divEmail">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Votre @mail*" required>
+                    <img src="images/illustration-forms.svg" alt="">
+
+                </div>
+                
 
                 <!-- TITLES -->
                 <label for="tile"></label>
