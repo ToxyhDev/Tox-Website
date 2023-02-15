@@ -1,3 +1,12 @@
+<?php
+if (isset($_POST['texts'])) {
+    $entete  = 'MIME-Version: 1.0' . "\r\n";
+    $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    $entete .= 'From: toxyhgaming@gmail.com' . "\r\n";
+    $entete .= 'Reply-to: ' . $_POST['email'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -119,33 +128,57 @@
         <section id="meContacter">
             <h2 class="titleSection">ME CONTACTER</h2>
 
-            <form action="submit_contact.php" method="post">
 
-                <!-- EMAIL -->
-                <div id="divEmail">
-                    <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Votre @mail*" required>
-                    <img src="images/illustration-forms.svg" alt="">
 
-                </div>
-                
 
-                <!-- TITLES -->
-                <label for="tile"></label>
-                <input type="text" name="title" id="title" minlength="5" placeholder="Votre titre*" required>
-                <!-- <select name="chooseTitle" id="chooseTitle">
-                    <option value="information">Demande de renseignement</option>
-                    <option value="bug">J'ai rencontré un bug sur le site</option>
-                </select> -->
+            <?php if(!isset($_POST['email']) || !isset($_POST['title'])): ?>
+                <!-- Afficher formulaire -->
+                <form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post">
+                    <!-- EMAIL -->
+                    <div id="divEmail">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Votre @mail*" required>
+                        <img src="images/illustration-forms.svg" alt="">
+                    </div>
+                    <!-- TITLES -->
+                    <label for="tile"></label>
+                    <input type="text" name="title" id="title" minlength="5" placeholder="Votre titre*" required>
+                    <!-- MESSAGE -->
+                    <label for="texts"></label>
+                    <textarea name="texts" id="texts" minlength="20" maxlength="2000" placeholder="Votre texte*" required></textarea>
+                    <p>* Champs obligatoires</p>
+                    <!-- SEND -->
+                    <button h type="submit" id="formSend">Envoyer</button>
+                </form>
 
-                <!-- MESSAGE -->
-                <label for="texts"></label>
-                <textarea name="texts" id="texts" minlength="20" maxlength="2000" placeholder="Votre texte*" required></textarea>
-                <p>* Champs obligatoires</p>
-                <!-- SEND -->
-                <button type="submit" id="formSend">Envoyer</button>
+            <?php elseif(isset($_POST['email']) || isset($_POST['title'])): ?>
+                <!-- Reponse reception formulaire -->
+                <?php
+                    echo "<script type='text/javascript'>document.location.replace('index.php#meContacter');</script>";
+                    $email = $_POST['email'];
+                    $title = $_POST['title'];
+                    $message = $_POST['texts'];
 
-            </form>
+                    $sendMail = mail('toxyhgaming@gmail.com', $title, $message, $entete);
+                ?>
+
+                <section id="reponseForm">
+
+                    <?php if ($sendMail) { echo('<h3>Votre message est envoyé</h3>');
+                        } else {
+                            echo('<h3>Votre message est refusé</h3>');
+                        } ?>
+
+                    <h4>Rappel de vos informations:</h4>
+                    <p><?php echo 'Email :' . $email; ?></p>
+                    <p><?php echo 'Objet :' . $title; ?></p>
+                    <p><?php echo 'Message :' . $message; ?></p>
+                    
+                </section>
+
+            <?php else: echo "<h3>Erreur affichage formulaire</h2>"?> 
+
+            <?php endif; ?>
         </section>
 
 
