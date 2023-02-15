@@ -17,8 +17,8 @@ if (isset($_POST['texts'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
     <title>Tox Dev-Web</title>
 </head>
@@ -142,13 +142,13 @@ if (isset($_POST['texts'])) {
                     </div>
                     <!-- TITLES -->
                     <label for="tile"></label>
-                    <input type="text" name="title" id="title" minlength="5" placeholder="Votre titre*" required>
+                    <input type="text" name="title" id="title" minlength="5" maxlength="120" placeholder="Votre titre*" required>
                     <!-- MESSAGE -->
                     <label for="texts"></label>
-                    <textarea name="texts" id="texts" minlength="20" maxlength="2000" placeholder="Votre texte*" required></textarea>
+                    <textarea name="texts" id="texts" minlength="20" maxlength="4000" placeholder="Votre texte*" required></textarea>
                     <p>* Champs obligatoires</p>
                     <!-- SEND -->
-                    <button h type="submit" id="formSend">Envoyer</button>
+                    <button type="submit" id="formSend">Envoyer</button>
                 </form>
 
             <?php elseif(isset($_POST['email']) || isset($_POST['title'])): ?>
@@ -164,19 +164,26 @@ if (isset($_POST['texts'])) {
 
                 <section id="reponseForm">
 
-                    <?php if ($sendMail) { echo('<h3>Votre message est envoyé</h3>');
-                        } else {
-                            echo('<h3>Votre message est refusé</h3>');
-                        } ?>
+                    <?php if($sendMail): ?>
+                        <span id="checkCircle" class="material-symbols-outlined">check_circle</span>
+                        <?php echo('<h3>Votre message est envoyé.</h3>'); ?>
 
-                    <h4>Rappel de vos informations:</h4>
-                    <p><?php echo 'Email :' . $email; ?></p>
-                    <p><?php echo 'Objet :' . $title; ?></p>
-                    <p><?php echo 'Message :' . $message; ?></p>
+                        <div id="rappelFormInfo">
+                        <h4>Rappel de vos informations:</h4>
+                        <p><?php echo '<span>Email: </span>' . $email; ?></p>
+                        <p><?php echo '<span>Objet: </span>' . $title; ?></p>
+                        <p><?php echo '<span>Message: </span>' . $message; ?></p>
+                    </div>
+
+                    <?php else: ?>
+                        <span id="cancelCircle" class="material-symbols-outlined">cancel</span>
+
+                        <?php echo("<h3>L'envoi de votre message n'a pas fonctionné.</h3>"); ?>
                     
+                    <?php endif; ?>
                 </section>
 
-            <?php else: echo "<h3>Erreur affichage formulaire</h2>"?> 
+            <?php else: echo "<h3>Erreur affichage formulaire</h3>"?> 
 
             <?php endif; ?>
         </section>
