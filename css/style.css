@@ -31,7 +31,7 @@ a {
 h1, h2 {
     font-family: var(--font-title), sans-serif;
 }
-h3, p, a {
+h3, h4, p, a, input, select, textarea, button {
     font-family: var(--font-body), sans-serif;
 }
 
@@ -118,7 +118,7 @@ header .socialNetwork {
 #header nav #navMobile {
     display: none;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     html {
         font-size: 40%;
     }
@@ -196,7 +196,7 @@ main #firstPage #imgFirstPage {
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 769px){
     html {
         font-size: 50%;
     }
@@ -274,23 +274,24 @@ main #maBio .imgBlob {
     padding-top: 5rem;
     filter: drop-shadow(4px 4px 8px var(--color-light-grey));
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     html {
         font-size: 40%;
     }
-    main #maBio h2 {
+    /* main #maBio h2 {
         position: relative;
         transform: rotate(0deg);
         top: 0;
         padding-top: 1rem;
 
-    }
+    } */
     main #maBio .blobSection {
         flex-direction: column;
         margin: 0;
     }
     main #maBio .blobSection p {
         text-align: center;
+        padding: 5rem 0.5rem 3rem 0.5rem;
     }
     
 }
@@ -324,7 +325,7 @@ main #mesProjets h2 {
     font-size: 5rem;
     font-weight: 700;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     main #mesProjets {
         background-image: url(../images/patternpadMobileGrey.svg);
         background-repeat: no-repeat;
@@ -332,19 +333,7 @@ main #mesProjets h2 {
         background-position: bottom;
     }
 }
-@media screen and (max-width: 425px) {
-    main #mesProjets h2 {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: rotate(0deg);
-        padding-top: 1rem;
-        text-align: center;
 
-        /* border: 1px solid red; */
-    }
-
-}
 
 main #mesProjets #carousselProjet {
     position: absolute;
@@ -388,8 +377,8 @@ main #mesProjets #carousselProjet .projets {
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
     background-image: linear-gradient(-60deg,  
     rgba(109,158,153,1) 0%, 
-    rgba(156,149,146,1) 30%, 
-    rgba(156,149,146,1) 60%,
+    rgba(156,149,146,1) 45%, 
+    rgba(156,149,146,1) 46%,
     rgba(255,231,121,1) 100%);
     
 
@@ -441,7 +430,7 @@ main #mesProjets #carousselProjet .projets a {
     margin-left: 100%;
     transform: translate(-100%);
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     main #mesProjets #carousselProjet {
         position: absolute;
         width: 100%;
@@ -495,6 +484,18 @@ main #meContacter {
     width: 100%;
     height: 100vh;
     background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --form-border: 0.4rem solid var(--color-black);
+    --form-border-valid: 0.4rem solid var(--color-green);
+    --form-border-invalid: 0.4rem solid var(--color-red);
+    --form-border-raduis: 999rem;
+    --form-margin-bottom: 2rem;
+    --form-margin-bottom-texts: 0.8rem;
+    --form-padding: 1.5rem;
 }
 main #meContacter h2 {
     position: absolute;
@@ -506,4 +507,184 @@ main #meContacter h2 {
 
     font-size: 5rem;
     font-weight: 700;
+}
+
+@media screen and (max-width: 426px) {
+    main #mesProjets h2, main #maBio h2, main #meContacter h2 {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+        padding-top: 1rem;
+        padding-bottom: 6rem;
+        text-align: center;
+
+       
+    }
+    main #meContacter {
+        flex-direction: column;
+        justify-content: normal;
+    }
+
+}
+
+#meContacter form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    height: 80%;
+    /* border: 1px solid green; */
+}
+
+
+form #divEmail {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+form #divEmail img {
+    width: 30%;
+    height: 14rem;
+}
+
+form #email, form #title {
+    border: var(--form-border);
+    border-radius: var(--form-border-raduis);
+    padding: var(--form-padding);
+    margin-bottom: var(--form-margin-bottom);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 2rem;
+    height: 6rem;
+}
+form #email {
+    width: 70%;
+    /* height: 60%; */
+}
+form #title {
+    width: 100%;
+    /* height: 12%; */
+}
+form #texts {
+    border: var(--form-border);
+    border-radius: 3rem;
+    margin-bottom: var(--form-margin-bottom-texts);
+    width: 100%;
+    height: 70%;
+    resize: none;
+    padding: var(--form-padding);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 2rem;
+}
+#texts::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4rem;
+}
+#texts::-webkit-scrollbar-thumb {
+    background-color: var(--color-black);
+    background-clip: padding-box;
+    border: 1.5rem solid rgba(0, 0, 0, 0);
+    border-radius: 20rem;
+}
+
+/* input global */
+
+form input::placeholder, form textarea::placeholder {
+    color: var(--color-black);
+    font-weight: bold;
+}
+form #email:focus, form #title:focus, form #texts:focus {
+    outline: none;
+}
+
+/* input valid */
+form #email:focus:valid, form #title:focus:valid, form #texts:focus:valid {
+    border: var(--form-border-valid);
+}
+form #email:not(:focus):valid, form #title:not(:focus):valid, form #texts:not(:focus):valid {
+    background-color: var(--color-green);
+    font-weight: bold;
+}
+
+/* input invalid */
+form #email:focus:invalid, form #title:focus:invalid, form #texts:focus:invalid {
+    border: var(--form-border-invalid);
+    background-color: initial;
+}
+form input:not(:focus):not(:placeholder-shown):invalid, 
+form textarea:not(:focus):not(:placeholder-shown):invalid {
+    background-color: var(--color-red);
+    font-weight: bold;
+}
+form p {
+    font-size: 1.2rem;
+}
+form #formSend {
+    border: var(--form-border);
+    border-radius: var(--form-border-raduis);
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: var(--color-yellow);
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    margin-left: 100%;
+    transform: translate(-100%);
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+#meContacter #reponseForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 80%;
+}
+
+#reponseForm #checkCircle {
+    color: var(--color-green);
+    font-size: 10rem;
+}
+#reponseForm #cancelCircle {
+    color: var(--color-red);
+    font-size: 10rem;
+}
+#reponseForm h3 {
+    font-size: 3rem;
+    text-align: center;
+}
+#reponseForm #rappelFormInfo {
+    border: var(--form-border);
+    border-radius: 3rem;
+    padding: var(--form-padding);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#reponseForm #rappelFormInfo h4 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+#reponseForm #rappelFormInfo span {
+    font-weight: bold;
+}
+#reponseForm #rappelFormInfo p {
+    font-size: 1.8rem;
+}
+
+
+@media screen and (max-width: 426px) {
+    #meContacter form {
+        width: 95%;
+    }
+    #meContacter #reponseForm {
+        width: 95%;
+    }
 }
