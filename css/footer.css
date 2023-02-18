@@ -1,0 +1,10 @@
+footer {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* footer #copyright h2 {
+    margin: 0;
+} */
