@@ -43,8 +43,8 @@ h3, h4, p, a, input, select, textarea, button {
     width: 100%;
     top: 0;
     background-color: var(--color-white);
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     border-image: linear-gradient(90deg, 
     rgba(99,115,122,1) 0%, 
     rgba(109,158,153,1) 25%, 
@@ -55,7 +55,84 @@ h3, h4, p, a, input, select, textarea, button {
     border-bottom-width: 8px;
     border-style: solid;
 }
-#header #nameHeader {
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+
+}
+/* nav #nameHeader { border: 1px solid red; } */
+
+
+#header #nameHeader h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    padding: 0 1.5rem 0 0; 
+    /* border: 1px solid blue; */
+}
+#header nav li a {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+nav #toggleMenu, nav label {
+    display: none;
+}
+header #socialNetworks {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0 0 2rem;
+    /* border: 1px solid purple; */
+}
+header .socialNetwork {
+    display: flex;
+    height: 3.2em;
+    /* padding-right: min(1vw, 10px); */
+}
+@media screen and (max-width: 769px) {
+    header #socialNetworks {
+        flex: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 2rem 0 0;
+    }
+    nav #menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        /* border: 1px solid blue; */
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+        gap: 2rem;
+    }
+    nav label {
+        display: inline-flex;
+        cursor: pointer;
+    }
+    nav #toggleMenu:not(:checked) ~ #menu {
+        display: none;
+    }
+    nav #toggleMenu:checked ~ #menu {
+        height: 100%;
+    }
+}
+/* #header #nameHeader {
     width: min(20%, 150px);
 }
 #header #nameHeader h1 {
@@ -64,20 +141,14 @@ h3, h4, p, a, input, select, textarea, button {
     text-align: center;
     letter-spacing: 2px;
     margin: 0;
-
-    /* border: 1px solid blue; */
 }
 #header nav {
     width: 100%;
-
-    /* border: 1px solid blue; */
 }
 #header nav #navComputer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* border: 1px solid blue; */
 }
 #header nav #navComputer ul {
     width: 100%;
@@ -87,8 +158,6 @@ h3, h4, p, a, input, select, textarea, button {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
-    /* border: 1px solid green; */
 }
 #header nav li {
     padding: 0 min(10%, 100px) 0 min(10%, 100px);
@@ -98,23 +167,16 @@ h3, h4, p, a, input, select, textarea, button {
     font-size: 1.4rem;
     font-weight: 400;
 }
-
-
 header #socialNetworks {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /* border: 1px solid red; */
 }
 header .socialNetwork {
     display: flex;
     height: 3.2em;
     padding-right: min(1vw, 10px);
-
-    /* border: 1px solid red; */
 }
-
 #header nav #navMobile {
     display: none;
 }
@@ -129,13 +191,9 @@ header .socialNetwork {
         display: flex;
         justify-content: flex-end;
         font-size: 1.4rem;
-
-        /* border: 1px solid red; */
     }
-}
-/* #header {
-    display: none;
 } */
+
 
 /* FIRST PAGE */
 main #firstPage {
