@@ -1,10 +1,20 @@
 footer {
     /* border: 1px solid red; */
+    padding-top: 4rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background-color: var(--color-white);
+
 }
-/* footer #copyright h2 {
-    margin: 0;
-} */
+footer #copyright p {
+    font-size: 2rem;
+}
+footer #copyright p span {
+    font-weight: bold;
+}
+footer #copyright a {
+    text-decoration: underline 1px;
+}

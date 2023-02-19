@@ -1,7 +1,8 @@
 <div id="copyright">
-    <h2>&#169; 
+    <p>&#169; 
     <span><?php echo date('Y'); ?></span> 
-    tox-website.dev - 
-    <a href="">Mentions-Légales</a>
-    </h2>
+    - Tom ANDRE -
+    <a href="mentions-legales.php" target="_blank" rel="noopener noreferrer">Mentions-Légales</a> 
+    - Développeur Web
+    </p>
 </div>
