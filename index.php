@@ -26,48 +26,9 @@ if (isset($_POST['texts'])) {
 <body>
     <!-- NOM + MENU -->
     <header id="header">
-        <div id="nameHeader">
-            <h1>TOX</h1>
-        </div>
-        <nav>
-            <div id="navMobile">
-                <section id="socialNetworks">
-                    <a id="instagram" class="socialNetwork" href="http://" target="_blank">
-                        <img src="images/icons-instagram.svg" alt="">
-                    </a>
-                    <a id="twitter" class="socialNetwork" href="http://" target="_blank">
-                        <img src="images/icons-twitter.svg" alt="">
-                    </a>
-                    <a id="github" class="socialNetwork" href="http://" target="_blank">
-                        <img src="images/icons-github.svg" alt="">
-                    </a>
-                </section>
-                <span class="material-symbols-outlined">
-                    menu
-                </span>
-            </div>
-            <div id="navComputer">
-                <ul>
-                    <li><a href="#">MA BIO</a></li>
-                    <li><a href="#">MES PROJETS</a></li>
-                    <li><a href="#">ME CONTACTER</a></li>
-                </ul>
-                <section id="socialNetworks">
-                    <a id="instagram" class="socialNetwork" href="http://" target="_blank">
-                        <img src="images/icons-instagram.svg" alt="">
-                    </a>
-                    <a id="linkedin" class="socialNetwork" href="http://" target="_blank">
-                        <img src="images/icons-linkedin.svg" alt="">
-                    </a>
-                    <a id="github" class="socialNetwork" href="http://" target="_blank">
-                        <img src="images/icons-github.svg" alt="">
-                    </a>
-                </section>
-            </div>
-
-        </nav>
-
+        <?php include('includes/header.php'); ?>
     </header>
+
     <main>
         <!-- FIRST PAGE -->
         <header id="firstPage">
@@ -142,7 +103,7 @@ if (isset($_POST['texts'])) {
                         <img src="images/illustration-forms.svg" alt="">
                     </div>
                     <!-- TITLES -->
-                    <label for="tile"></label>
+                    <label for="title"></label>
                     <input type="text" name="title" id="title" minlength="5" maxlength="120" placeholder="Votre titre*" required>
                     <!-- MESSAGE -->
                     <label for="texts"></label>
