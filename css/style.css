@@ -17,4 +17,119 @@
   text-decoration: underline 1px;
 }
 
+.navbar {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #FBFBFB;
+  border-image: linear-gradient(90deg, rgb(99, 115, 122) 0%, rgb(109, 158, 153) 25%, rgb(156, 149, 146) 50%, rgb(252, 246, 234) 75%, rgb(255, 231, 121) 100%) 1;
+  border-width: 0px;
+  border-bottom-width: 8px;
+  border-style: solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-name h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0.8rem;
+}
+
+.socialNetworks {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 0 0 2rem;
+}
+@media screen and (max-width: 769px) {
+  .socialNetworks {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem 0 0;
+  }
+}
+.socialNetworks--icon {
+  display: flex;
+  height: 4rem;
+}
+
+@media screen and (max-width: 769px) {
+  .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+}
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  padding: 0 4rem 0 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 769px) {
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 35px;
+    height: 25px;
+    margin-right: 2rem;
+  }
+  .burgerMenu--line {
+    background-color: var(--color-black);
+    width: 100%;
+    height: 3px;
+    border-radius: 25rem;
+    visibility: visible;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+}
+
+.btnMenu {
+  display: none;
+}
+@media screen and (max-width: 769px) {
+  .btnMenu:checked + .burgerMenu .burgerMenu--line:nth-child(1) {
+    transform-origin: center;
+    transform: translateY(11px) rotate(45deg);
+  }
+  .btnMenu:checked + .burgerMenu .burgerMenu--line:nth-child(2) {
+    transform-origin: center;
+    visibility: hidden;
+    transform: rotate(-45deg);
+  }
+  .btnMenu:checked + .burgerMenu .burgerMenu--line:nth-child(3) {
+    transform-origin: center;
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  .btnMenu:not(:checked) ~ .menu {
+    display: none;
+  }
+  .btnMenu:checked ~ .menu {
+    height: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

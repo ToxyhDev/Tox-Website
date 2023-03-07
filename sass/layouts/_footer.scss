@@ -1,0 +1,18 @@
+.copyright {
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-white);
+    &__symbol {
+        font-size: 2rem;
+    }
+    &__date {
+        font-weight: bold; 
+    }
+    &__link {
+        text-decoration: underline 1px;
+    }
+}

@@ -27,7 +27,7 @@ if (isset($_POST['texts'])) {
 </head>
 <body>
     <!-- NOM + MENU -->
-    <header id="header">
+    <header>
         <?php include('includes/header.php'); ?>
     </header>
 
