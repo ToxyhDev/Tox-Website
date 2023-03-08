@@ -1,0 +1,12 @@
+html {
+    font-size: 62.5%;
+    @include tablet-only {
+        font-size: 50%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $color-font;
+}

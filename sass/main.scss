@@ -1,4 +1,11 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
-@import "./layouts/footer.scss";
+@import "./utils/placeholders";
+@import "./base/base.scss";
+@import "./base/typographies";
 @import "./layouts/navabar.scss";
+@import "./layouts/forms.scss";
+@import "./layouts/footer.scss";
+@import "./pages/bio.scss";
+@import "./pages/projects.scss";
+@import "./components/button.scss";

@@ -1,20 +1,46 @@
-.copyright {
-  padding-top: 4rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: var(--color-white);
-}
-.copyright__symbol {
+.forms-title__case, .forms-email__case {
+  border-radius: 999rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
+  height: 6rem;
 }
-.copyright__date {
-  font-weight: bold;
+
+.forms-texts__case, .forms-title__case, .forms-email__case {
+  border: 0.4rem solid var(--color-black);
+  padding: 1.5rem;
+  background-color: #FBFBFB;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
-.copyright__link {
-  text-decoration: underline 1px;
+
+html {
+  font-size: 62.5%;
+}
+@media screen and (max-width: 769px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #22272E;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #22272E;
+}
+
+h1, h2 {
+  font-family: "Unbounded", sans-serif, sans-serif;
+}
+
+h3, h4, p, a, input, select, textarea, button {
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar {
@@ -130,6 +156,158 @@
   .btnMenu:checked ~ .menu {
     height: 100%;
   }
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70%;
+  height: 80%;
+}
+@media screen and (max-width: 426px) {
+  .forms {
+    width: 95%;
+  }
+}
+.forms-email {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+.forms-email__case {
+  width: 70%;
+}
+.forms-email--img {
+  width: 30%;
+  height: 14rem;
+}
+.forms-title__case {
+  width: 100%;
+}
+.forms-texts__case {
+  border-radius: 3rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  height: 70%;
+  resize: none;
+  font-size: 2rem;
+}
+.forms-texts__case::-webkit-scrollbar {
+  background-color: transparent;
+  width: 4rem;
+}
+.forms-texts__case::-webkit-scrollbar-thumb {
+  background-color: #22272E;
+  background-clip: padding-box;
+  border: 1.5rem solid rgba(0, 0, 0, 0);
+  border-radius: 20rem;
+}
+.forms--input::placeholder {
+  color: #22272E;
+  font-weight: bold;
+}
+.forms--input:focus {
+  outline: none;
+}
+.forms--input:focus:valid {
+  border: 0.4rem solid var(--color-green);
+}
+.forms--input:focus:invalid {
+  border: var(--form-border-invalid);
+  background-color: initial;
+}
+.forms--input:not(:focus):valid {
+  background-color: #6D9E99;
+  font-weight: bold;
+}
+.forms--input:not(:focus):not(:placeholder-shown):invalid {
+  background-color: #FF4E67;
+  font-weight: bold;
+}
+.forms__attention {
+  font-size: 1.2rem;
+}
+.forms-response {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 80%;
+}
+@media screen and (max-width: 426px) {
+  .forms-response {
+    width: 95%;
+  }
+}
+.forms-response__valid {
+  color: #6D9E99;
+}
+.forms-response__valid.material-symbols-outlined {
+  font-size: 10rem;
+}
+.forms-response__infoValid {
+  border: var(--form-border);
+  border-radius: 3rem;
+  padding: var(--form-padding);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.forms-response__infoValid--title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.forms-response__infoValid--body {
+  font-size: 1.8rem;
+}
+.forms-response__infoValid--span {
+  font-weight: bold;
+}
+.forms-response__invalid {
+  color: #FF4E67;
+}
+.forms-response__invalid.material-symbols-outlined {
+  font-size: 10rem;
+}
+.forms-response--title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.copyright {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-white);
+}
+.copyright__symbol {
+  font-size: 2rem;
+}
+.copyright__date {
+  font-weight: bold;
+}
+.copyright__link {
+  text-decoration: underline 1px;
+}
+
+.btn {
+  border: 0.4rem solid var(--color-black);
+  border-radius: 999rem;
+  font-size: 3rem;
+  font-weight: 500;
+  background-color: #FFE779;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  margin-left: 100%;
+  transform: translate(-100%);
+  cursor: pointer;
+  color: #22272E;
 }
 
 /*# sourceMappingURL=style.css.map */
