@@ -60,7 +60,7 @@
                 border: $form-border-valid;
             }
             &:invalid {
-                border: var(--form-border-invalid);
+                border: $form-border-invalid;
                 background-color: initial;
             }
         }

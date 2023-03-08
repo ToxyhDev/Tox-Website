@@ -3,6 +3,9 @@ html {
     @include tablet-only {
         font-size: 50%;
     }
+    @include mobile-only {
+        font-size: 40%;
+    }
 }
 
 body {

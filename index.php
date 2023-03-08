@@ -30,7 +30,7 @@ if (isset($_POST['texts'])) {
 
     <main>
         <!-- HEADER -->
-        <header class="header"> 
+        <header class="header sections sections--paire"> 
             <div class="header-text">
                 <h2 class="header-text__title">TOX</h2>
                 <p class="header-text__body">Dev WEB Junior</p>
@@ -41,23 +41,23 @@ if (isset($_POST['texts'])) {
         </header>
 
         <!-- MA BIO -->
-        <section id="maBio">
-            <h2 class="titleSection">MA BIO</h2>
+        <section id="maBio" class="sections sections--impaire maBio">
+            <h2 class="sections__title">MA BIO</h2>
 
-            <div id="blobPc" class="blobSection">
-                <img class="imgBlob" src="images/illustration-blob-pc.svg" alt="">
-                <p>Je me suis formé en autodidacte sur le site d'OpenClassrooms sur les langages HTML, CSS et JavaScript.</p>
+            <div class="maBio-blob">
+                <img class="maBio-blob__img" src="images/illustration-blob-pc.svg" alt="">
+                <p class="maBio-blob__p">Je me suis formé en autodidacte sur le site d'OpenClassrooms sur les langages HTML, CSS et JavaScript.</p>
             </div>
 
-            <div id="blobCible" class="blobSection">
-                <img class="imgBlob" src="images/illustration-blob-cible.svg" alt="">
-                <p>Avec les bases enseignées je fais en sorte de réaliser le plus possible de nouveau projet afin de chercher à approfondir mes connaissances.</p>
+            <div class="maBio-blob">
+                <img class="maBio-blob__img" src="images/illustration-blob-cible.svg" alt="">
+                <p class="maBio-blob__p">Avec les bases enseignées je fais en sorte de réaliser le plus possible de nouveau projet afin de chercher à approfondir mes connaissances.</p>
             </div>
         </section>
 
         <!-- MES PROJETS -->
-        <section id="mesProjets">
-            <h2 class="titleSection">MES PROJETS</h2>
+        <section id="mesProjets" class="sections sections--paire">
+            <h2 class="sections__title">MES PROJETS</h2>
 
             <section id="carousselProjet">
 
@@ -84,8 +84,8 @@ if (isset($_POST['texts'])) {
 
         </section>
 
-        <section id="meContacter" class="sections meContacter">
-            <h2 class="titleSection">ME CONTACTER</h2>
+        <section id="meContacter" class="sections sections--impaire meContacter">
+            <h2 class="sections__title">ME CONTACTER</h2>
 
             <?php include('includes/forms.php'); ?>
         </section>
