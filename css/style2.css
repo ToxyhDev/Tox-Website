@@ -12,98 +12,6 @@
     --font-body: 'Montserrat';
 }
 
-
-/* FIRST PAGE */
-main #firstPage {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--color-light-beige);
-    background-image: url(../images/patternpadComputer.svg);
-    background-repeat: repeat-y;
-    background-size: 30%;
-    background-position: bottom right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-
-
-}
-main #firstPage #titleFirstPage {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* border: 1px solid blue;  */
-
-
-}
-main #firstPage #titleFirstPage h2 {
-    font-weight: 900;
-    font-size: 12rem;
-    text-shadow: 6px 6px 3px gray;
-    margin: 0;
-    /* border: 1px solid blue;  */
-
-
-}
-main #firstPage #titleFirstPage p {
-    font-weight: 300;
-    font-size: 5rem;
-    text-align: center;
-    margin: 0;
-    /* border: 1px solid blue;  */
-
-
-}
-main #firstPage #imgFirstPage {
-    width: 45%;
-    height: auto;
-    background-color: var(--color-light-beige);
-    /* border-radius: 85% 15% 77% 23% / 50% 72% 28% 50%; */
-    border-radius: 83% 17% 36% 64% / 50% 36% 64% 50% ;
-    border: 1px solid var(--color-light-beige);
-    margin-right: 5%;
-
-    /* border: 1px solid blue;  */
-}
-
-
-
-@media screen and (max-width: 769px){
-    /* html {
-        font-size: 50%;
-    } */
-    main #firstPage {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        background-image: url(../images/patternpadMobileGrey.svg);
-        background-repeat: no-repeat;
-        background-size: 130vh;
-        background-position: bottom;
-
-        /* border: 1px solid blue;  */
-
-    }
-    main #firstPage #titleFirstPage {
-        width: 90%;
-        /* border: 1px solid red;  */
-
-    }
-    main #firstPage #imgFirstPage {
-        width: min(90%, 500px);
-    }
-}
-
-
-
-
-
 /* MA BIO */
 main #maBio {
     width: 100%;
@@ -395,7 +303,6 @@ main .meContacter h2 {
         padding-bottom: 6rem;
         text-align: center;
 
-       
     }
     .meContacter {
         flex-direction: column;

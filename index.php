@@ -23,23 +23,21 @@ if (isset($_POST['texts'])) {
     <title>Tox Dev-Web</title>
 </head>
 <body>
-    <!-- NOM + MENU -->
+    <!-- NAVBAR -->
     <header>
         <?php include('includes/header.php'); ?>
     </header>
 
     <main>
-        <!-- FIRST PAGE -->
-        <header id="firstPage">
-            <div id="titleFirstPage">
-                <h2>TOX</h2>
-                <p>Dev WEB Junior</p>
+        <!-- HEADER -->
+        <header class="header"> 
+            <div class="header-text">
+                <h2 class="header-text__title">TOX</h2>
+                <p class="header-text__body">Dev WEB Junior</p>
             </div>
-            <div id="imgFirstPage">
+            <div class="header-img">
                 <img src="images/img-firstPage.svg" alt="Image d'un developpeur">
             </div>
-
-
         </header>
 
         <!-- MA BIO -->
