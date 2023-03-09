@@ -3,13 +3,13 @@
 
     <section class="socialNetworks">
         <a class="socialNetworks--icon" href="https://twitter.com/SuperToxyh" target="_blank">
-            <img src="images/icons-twitter.svg" alt="Lien Twitter"></a>
+        <img src="images/icons-twitter.svg" alt="Lien Twitter"></a>
 
         <a class="socialNetworks--icon" href="https://www.linkedin.com/in/tom-andre/" target="_blank">
-            <img src="images/icons-linkedin.svg" alt="Lien LinkedIn"></a>
+        <img src="images/icons-linkedin.svg" alt="Lien LinkedIn"></a>
 
         <a class="socialNetworks--icon" href="https://github.com/ToxyhDev" target="_blank">
-            <img src="images/icons-github.svg" alt="Lien Github"></a>
+        <img src="images/icons-github.svg" alt="Lien Github"></a>
     </section>
 
     <input type="checkbox" name="btnMenu" id="btnMenu" class="btnMenu">
