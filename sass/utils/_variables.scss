@@ -14,9 +14,9 @@ $breakpoints: (
     mobile: 426px
 );
 
-$form-border: 0.4rem solid var(--color-black);
-$form-border-valid: 0.4rem solid var(--color-green);
-$form-border-invalid: 0.4rem solid var(--color-red);
+$form-border: 0.4rem solid $color-font;
+$form-border-valid: 0.4rem solid $color-valid;
+$form-border-invalid: 0.4rem solid $color-invalid;
 $form-border-raduis: 999rem;
 $form-margin-bottom: 2rem;
 $form-margin-bottom-texts: 0.8rem;

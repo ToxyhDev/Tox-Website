@@ -14,7 +14,6 @@ if (isset($_POST['texts'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
@@ -56,25 +55,26 @@ if (isset($_POST['texts'])) {
         </section>
 
         <!-- MES PROJETS -->
-        <section id="mesProjets" class="sections sections--paire">
+        <section id="mesProjets" class="sections sections--paire mesProjets">
             <h2 class="sections__title">MES PROJETS</h2>
 
-            <section id="carousselProjet">
+            <section class="mesProjets-carousel">
+                <!-- caroussel -->
 
-                <div id="projet1" class="projets">
-                    <h3>Jeu le Petit BAC</h3>
-                    <div class="descProjet">
-                        <img src="images/illustration-interface.svg" alt="" class="imgDescProjet">
-                        <p>C'est un site WEB qui permet de générer une lettre aléatoirement pour jouer au jeu du petit BAC.</p>
+                <div class="mesProjets-carousel__slide">
+                    <h3 class="mesProjets-carousel__slide--title">Jeu le Petit BAC</h3>
+                    <div class="mesProjets-carousel__slide-desc">
+                        <img  class="mesProjets-carousel__slide-desc__img" src="images/illustration-interface.svg" alt="">
+                        <p class="mesProjets-carousel__slide-desc__p">C'est un site WEB qui permet de générer une lettre aléatoirement pour jouer au jeu du petit BAC.</p>
                     </div>
                     <a class="btn" href="../jeuLePetitBac/index.html" target="_blank" rel="noopener noreferrer">Lien</a>
                 </div>
 
-                <div id="projet2" class="projets">
-                    <h3>Max Portfolio</h3>
-                    <div class="descProjet">
-                        <img src="images/illustration-portable.svg" alt="" class="imgDescProjet">
-                        <p>Création d'un site web sous le format d'un portfolio d'images, avec la création d'une gallerie d'image qui met en valeur chaques images.</p>
+                <div class="mesProjets-carousel__slide">
+                    <h3 class="mesProjets-carousel__slide--title">Max Portfolio</h3>
+                    <div class="mesProjets-carousel__slide-desc">
+                        <img  class="mesProjets-carousel__slide-desc__img" src="images/illustration-portable.svg" alt="">
+                        <p class="mesProjets-carousel__slide-desc__p">Création d'un site web sous le format d'un portfolio d'images, avec la création d'une gallerie d'image qui met en valeur chaques images.</p>
                     </div>
                     <a class="btn" href="../MaxPortfolio/index.html" target="_blank" rel="noopener noreferrer">Lien</a>
                 </div>

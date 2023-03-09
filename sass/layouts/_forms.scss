@@ -96,9 +96,9 @@
             }
         }
         &__infoValid {
-            border: var(--form-border);
+            border: $form-border;
             border-radius: 3rem;
-            padding: var(--form-padding);
+            padding: $form-padding;
             width: 100%;
             max-width: 100%;
             overflow: hidden;
