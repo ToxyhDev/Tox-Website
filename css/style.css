@@ -361,14 +361,14 @@ h3, h4, p, a, input, select, textarea, button {
 }
 .sections--paire {
   background-color: #FCF6EA;
-  background-image: url(../images/patternpadComputer.svg);
+  background-image: url(/Tox-Website/images/patternpadComputer.svg);
   background-repeat: repeat-y;
   background-size: 30%;
   background-position: top right;
 }
 @media screen and (max-width: 426px) {
   .sections--paire {
-    background-image: url(../images/patternpadMobileGrey.svg);
+    background-image: url(/Tox-Website/images/patternpadMobileGrey.svg);
     background-repeat: no-repeat;
     background-size: 130vh;
     background-position: bottom;
