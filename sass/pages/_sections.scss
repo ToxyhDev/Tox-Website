@@ -1,0 +1,52 @@
+.sections {
+    &:first-child {
+        min-height: 100vh;
+    }
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    &--paire {
+        background-color: $color-background;
+        background-image: url(/Tox-Website/images/patternpadComputer.svg);
+        background-repeat: repeat-y;
+        background-size: 30%;
+        background-position: top right;
+        @include mobile-only {
+            background-image: url(/Tox-Website/images/patternpadMobileGrey.svg);
+            background-repeat: no-repeat;
+            background-size: 130vh;
+            background-position: bottom;
+        }
+    }
+    &--impaire {
+        background-color: $color-white;
+    }
+    +.meContacter {
+        box-shadow: none;
+        height: 100vh;
+    }
+
+
+}
+
+.sections__title {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 2vw;
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-50%);
+
+    font-size: 5rem;
+    font-weight: 700;
+    @include mobile-only {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+        padding-top: 1rem;
+        padding-bottom: 6rem;
+        text-align: center;
+    }
+}

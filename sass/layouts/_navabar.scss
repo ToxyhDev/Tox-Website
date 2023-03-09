@@ -1,0 +1,116 @@
+.navbar {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $color-white;
+    border-image: linear-gradient(90deg, 
+    rgba(99,115,122,1) 0%, 
+    rgba(109,158,153,1) 25%,
+    rgba(156,149,146,1) 50%, 
+    rgba(252,246,234,1) 75%, 
+    rgba(255,231,121,1) 100%) 1;
+    border-width: 0px;
+    border-bottom-width: 8px;
+    border-style: solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &-name h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 2px;
+        margin: 0;
+        padding: 0.8rem;
+    }
+}
+
+.socialNetworks {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0 0 2rem;
+    @include tablet-only {
+        flex: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 2rem 0 0;
+    }
+    &--icon {
+        display: flex;
+        height: 4rem; 
+    }
+}
+
+.menu {
+    @include tablet-only {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    &-list {
+        list-style: none;
+        display: flex;
+        gap: 4rem;
+        padding: 0 4rem 0 0;
+        font-size: 1.8rem;
+        font-weight: 400;
+        @include tablet-only{
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem 0;
+            gap: 2rem;
+        }
+    }
+}
+.burgerMenu {
+    @include tablet-only {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 35px;
+        height: 25px;
+        margin-right: 2rem;
+        &--line {
+            background-color: $color-font;
+            width: 100%;
+            height: 3px;
+            border-radius: 25rem;
+            visibility: visible;
+            transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        }
+    }
+}
+.btnMenu {
+    display: none;
+    @include tablet-only {
+        &:checked + .burgerMenu .burgerMenu {
+            &--line:nth-child(1) {
+                transform-origin: center;
+                transform: translateY(11px) rotate(45deg);
+            }
+            &--line:nth-child(2) {
+                transform-origin: center;
+                visibility: hidden;
+                transform: rotate(-45deg);
+            }
+            &--line:nth-child(3) {
+                transform-origin: center;
+                transform: translateY(-11px) rotate(-45deg);
+            }
+        }
+        &:not(:checked) ~ .menu {
+            display: none;
+        }
+        &:checked ~ .menu {
+            height: 100%;
+        }
+    }
+}

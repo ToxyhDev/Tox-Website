@@ -1,0 +1,44 @@
+.header {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    @include tablet-only {
+        flex-direction: column;
+    }
+
+    &-text {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include tablet-only {
+            width: 90%;
+        }
+
+        &__title {
+            font-weight: 900;
+            font-size: 12rem;
+            text-shadow: 6px 6px 3px gray;
+            margin: 0;
+        }
+
+        &__body {
+            font-weight: 300;
+            font-size: 5rem;
+            text-align: center;
+            margin: 0;
+        }
+    }
+    &-img {
+        width: 45%;
+        height: auto;
+        background-color: $color-background;
+        border-radius: 83% 17% 36% 64% / 50% 36% 64% 50% ;
+        border: 1px solid $color-background;
+        margin-right: 5%;
+        @include tablet-only {
+            width: min(90%, 500px);
+        }
+    }
+}

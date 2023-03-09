@@ -1,0 +1,15 @@
+// placeholders for _forms.scss
+%layout-field-input {
+    border-radius: $form-border-raduis;
+    margin-bottom: $form-margin-bottom;
+    font-size: 2rem;
+    height: 6rem;
+}
+%layout-field {
+    border: $form-border;
+    padding: $form-padding;
+    background-color: $color-white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}

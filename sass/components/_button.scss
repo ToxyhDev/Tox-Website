@@ -1,0 +1,12 @@
+.btn {
+    border: $form-border;
+    border-radius: $form-border-raduis;
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: $color-btn-background;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    margin-left: 100%;
+    transform: translate(-100%);
+    cursor: pointer;
+    color: $color-font;
+}
