@@ -34,9 +34,11 @@
         width: 45%;
         height: auto;
         background-color: $color-background;
-        border-radius: 83% 17% 36% 64% / 50% 36% 64% 50% ;
+        // border-radius: 83% 17% 36% 64% / 50% 36% 64% 50%;
+        animation: border-movement 10s infinite cubic-bezier(.38,.66,.72,.43);
         border: 1px solid $color-background;
         margin-right: 5%;
+
         @include tablet-only {
             width: min(90%, 500px);
         }
