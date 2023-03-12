@@ -12,7 +12,7 @@
         background-repeat: repeat-y;
         background-size: 30%;
         background-position: top right;
-        @include mobile-only {
+        @include tablet-only {
             background-image: url(/Tox-Website/images/patternpadMobileGrey.svg);
             background-repeat: no-repeat;
             background-size: 130vh;

@@ -12,7 +12,18 @@
 }
 
 @keyframes blob-movement {
-    // Crée un mouvement pour une bulle et une autre trajectoire pour l'autre
+    20% {
+        transform: translate($animation-blob-intensityX / 2, $animation-blob-intensityY * -1);
+    }
+    40% {
+        transform: translate($animation-blob-intensityX / 1.5, $animation-blob-intensityY / 1,5);
+    }
+    60% {
+        transform: translate($animation-blob-intensityX / -6, $animation-blob-intensityY / 3);
+    }
+    80% {
+        transform: translate($animation-blob-intensityX / -3, $animation-blob-intensityY / -3);
+    }
 }
 
 @keyframes headshake {
