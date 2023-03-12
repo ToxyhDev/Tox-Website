@@ -14,6 +14,39 @@
   -moz-box-sizing: border-box;
 }
 
+@keyframes border-movement {
+  0% {
+    border-radius: 83% 17% 36% 64%/50% 36% 64% 50%;
+  }
+  50% {
+    border-radius: 62% 38% 83% 17%/25% 80% 20% 75%;
+  }
+  100% {
+    border-radius: 83% 17% 36% 64%/50% 36% 64% 50%;
+  }
+}
+@keyframes blob-movement {
+  20% {
+    transform: translate(2%, -4%);
+  }
+  40% {
+    transform: translate(2.6666666667%, 4%, 5);
+  }
+  60% {
+    transform: translate(-0.6666666667%, 1.3333333333%);
+  }
+  80% {
+    transform: translate(-1.3333333333%, -1.3333333333%);
+  }
+}
+@keyframes headshake {
+  25% {
+    transform: translateX(1%);
+  }
+  75% {
+    transform: translateX(-1%);
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -209,6 +242,9 @@ h3, h4, p, a, input, select, textarea, button {
   border: 1.5rem solid rgba(0, 0, 0, 0);
   border-radius: 20rem;
 }
+.forms--input {
+  transition: background-color 1s cubic-bezier(0, 0.4, 0.19, 0.98);
+}
 .forms--input::placeholder {
   color: #22272E;
   font-weight: bold;
@@ -230,6 +266,7 @@ h3, h4, p, a, input, select, textarea, button {
 .forms--input:not(:focus):not(:placeholder-shown):invalid {
   background-color: #FF4E67;
   font-weight: bold;
+  animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
 }
 .forms__attention {
   font-size: 1.2rem;
@@ -340,7 +377,7 @@ h3, h4, p, a, input, select, textarea, button {
   width: 45%;
   height: auto;
   background-color: #FCF6EA;
-  border-radius: 83% 17% 36% 64%/50% 36% 64% 50%;
+  animation: border-movement 10s infinite cubic-bezier(0.38, 0.66, 0.72, 0.43);
   border: 1px solid #FCF6EA;
   margin-right: 5%;
 }
@@ -366,7 +403,7 @@ h3, h4, p, a, input, select, textarea, button {
   background-size: 30%;
   background-position: top right;
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 769px) {
   .sections--paire {
     background-image: url(/Tox-Website/images/patternpadMobileGrey.svg);
     background-repeat: no-repeat;
@@ -426,8 +463,14 @@ h3, h4, p, a, input, select, textarea, button {
 .maBio-blob:first-of-type {
   margin-top: 5rem;
 }
+.maBio-blob:first-of-type .maBio-blob__img {
+  animation: blob-movement 5s infinite linear;
+}
 .maBio-blob:last-child {
   margin-bottom: 5rem;
+}
+.maBio-blob:last-child .maBio-blob__img {
+  animation: blob-movement 5s reverse infinite linear;
 }
 @media screen and (max-width: 426px) {
   .maBio-blob {

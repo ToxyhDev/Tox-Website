@@ -50,6 +50,7 @@
         }
     }
     &--input {
+        transition: background-color 1s cubic-bezier(0,.4,.19,.98);
         &::placeholder {
             color: $color-font;
             font-weight: bold;
@@ -72,6 +73,7 @@
             &:not(:placeholder-shown):invalid {
                 background-color: $color-invalid;
                 font-weight: bold;
+                animation: headshake 100ms cubic-bezier(.4,.1,.6,.9) 2;
             }
         }
     }
