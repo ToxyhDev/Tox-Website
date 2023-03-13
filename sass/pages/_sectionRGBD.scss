@@ -1,0 +1,32 @@
+.rgbd {
+    &-body {
+        display: flex;
+        flex-direction: column;
+        line-height: 3rem;
+        padding: 3rem 20% 5rem 20%;
+        @include tablet-only {
+            padding: 3rem 5% 5rem 5%;
+        }
+        a {
+            text-decoration: underline $color-valid 0.2rem;
+            &:hover {
+                color: $color-valid;
+                text-decoration: none;
+                font-weight: bold;
+            }          
+        }
+        ul {
+            list-style: none;
+
+            li::before {
+                content: "\2022";
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+

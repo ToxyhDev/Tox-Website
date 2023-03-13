@@ -13,16 +13,16 @@
 
 @keyframes blob-movement {
     20% {
-        transform: translate($animation-blob-intensityX / 2, $animation-blob-intensityY * -1);
+        transform: translate(calc($animation-blob-intensityX / 2), $animation-blob-intensityY * -1);
     }
     40% {
-        transform: translate($animation-blob-intensityX / 1.5, $animation-blob-intensityY / 1,5);
+        transform: translate(calc($animation-blob-intensityX / 1.5), calc($animation-blob-intensityY / 1.5));
     }
     60% {
-        transform: translate($animation-blob-intensityX / -6, $animation-blob-intensityY / 3);
+        transform: translate(calc($animation-blob-intensityX / -6), calc($animation-blob-intensityY / 3));
     }
     80% {
-        transform: translate($animation-blob-intensityX / -3, $animation-blob-intensityY / -3);
+        transform: translate(calc($animation-blob-intensityX / -3), calc($animation-blob-intensityY / -3));
     }
 }
 

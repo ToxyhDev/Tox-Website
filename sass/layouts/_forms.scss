@@ -34,9 +34,8 @@
         border-radius: 3rem;
         margin-bottom: $form-margin-bottom-texts;
         width: 100%;
-        height: 70%;
+        height: 40vh;
         resize: none;
-        font-size: 2rem;
 
         &::-webkit-scrollbar {
             background-color: transparent;
@@ -49,6 +48,71 @@
             border-radius: 20rem;
         }
     }
+    &-rgbd {
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+
+        &__case {
+            flex: 1;
+            position: relative;
+            clear: both;
+            float: left;
+
+            input[type="checkbox"] {
+                display: none;
+                visibility: hidden;
+
+                &:checked + label {
+                    background: $color-valid;
+
+                    &:before {
+                        left: calc($checkbox-width / 2);
+                    }
+                }
+            }
+
+            label {
+                width: $checkbox-width;
+                height: calc($checkbox-width / 2);
+                box-sizing: border-box;
+                border: $checkbox-border;
+                float: left;
+                border-radius: 99rem;
+                position: relative;
+                cursor: pointer;
+                transition: .3s ease;
+
+                &:before {
+                    transition: .3s ease;
+                    content: '';
+                    width: calc($checkbox-width / 2) - 1rem;
+                    height: calc($checkbox-width / 2) - 1rem;
+                    position: absolute;
+                    background: $color-font;
+                    left: 0.5rem;
+                    top: 0.3rem;
+                    box-sizing: border-box;
+                    border: $checkbox-border;
+                    border-radius: 99rem;
+                }
+            }
+        }
+        &__text {
+            flex: 8;
+            font-size: 1.5rem;
+            &--a {
+                font-size: 1.5rem;
+                text-decoration: underline $color-valid 0.2rem;
+                &:hover {
+                    color: $color-valid;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
     &--input {
         transition: background-color 1s cubic-bezier(0,.4,.19,.98);
         &::placeholder {
@@ -109,9 +173,9 @@
                 font-size: 2.5rem;
                 margin: 0;
             }
-            &--body {
-                font-size: 1.8rem;
-            }
+            // &--body {
+            //     font-size: 1.8rem;
+            // }
             &--span {
                 font-weight: bold;
             }

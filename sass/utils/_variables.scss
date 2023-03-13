@@ -14,6 +14,10 @@ $breakpoints: (
     mobile: 426px
 );
 
+$project-border: 0.3rem solid $color-font;
+
+$btn-border: 0.3rem solid $color-font;
+
 $form-border: 0.4rem solid $color-font;
 $form-border-valid: 0.4rem solid $color-valid;
 $form-border-invalid: 0.4rem solid $color-invalid;
@@ -25,3 +29,6 @@ $form-padding: 1.5rem;
 $animation-shake-intensity: 1%;
 $animation-blob-intensityX: 4%;
 $animation-blob-intensityY: 4%;
+
+$checkbox-width: 6rem;
+$checkbox-border: 0.3rem solid $color-font;

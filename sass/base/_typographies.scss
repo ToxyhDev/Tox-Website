@@ -3,9 +3,16 @@ a {
     font-weight: normal;
     color: $color-font;
 }
-h1, h2 {
+h1 {
     font-family: $font-title, sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
 }
-h3, h4, p, a, input, select, textarea, button {
+h2 {
+    font-family: $font-title, sans-serif;
+    font-size: 3rem;
+}
+h3, h4, p, a, input, select, textarea, button, li {
     font-family: $font-body, sans-serif;
+    font-size: 2rem;
 }
