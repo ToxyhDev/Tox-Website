@@ -17,13 +17,13 @@
         &:first-of-type {
             margin-top: 5rem;
             & .maBio-blob__img {
-                animation: blob-movement 5s infinite linear;
+                animation: blob-movement 6s infinite linear;
             }
         }
         &:last-child {
             margin-bottom: 5rem;
             & .maBio-blob__img {
-                animation: blob-movement 5s reverse infinite linear;
+                animation: blob-movement 6s reverse infinite linear;
             }
         }
         @include mobile-only {

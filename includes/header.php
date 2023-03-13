@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <a href="" class="navbar-name"><h1>TOX</h1></a>
+    <a href="index.php" class="navbar-name"><h1>TOX</h1></a>
 
     <section class="socialNetworks">
         <a class="socialNetworks--icon" href="https://twitter.com/SuperToxyh" target="_blank">
