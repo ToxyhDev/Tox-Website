@@ -21,9 +21,9 @@
 
     <div class="menu">
         <ul class="menu-list">
-            <li><a href="#maBio">MA BIO</a></li>
-            <li><a href="#mesProjets">MES PROJETS</a></li>
-            <li><a href="#meContacter">ME CONTACTER</a></li>
+            <li><a href="index.php#maBio">MA BIO</a></li>
+            <li><a href="index.php#mesProjets">MES PROJETS</a></li>
+            <li><a href="index.php#meContacter">ME CONTACTER</a></li>
         </ul>
     </div>
 

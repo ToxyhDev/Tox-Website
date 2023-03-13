@@ -1,0 +1,14 @@
+.rgbd {
+    &-header {
+        height: 40vh;
+        background-color: $color-background;
+        display: flex;
+        align-items: center;
+        @include tablet-only {
+            height: 30vh;
+        }
+        &--title {
+            margin-left: 3%;
+        }
+    }
+}
