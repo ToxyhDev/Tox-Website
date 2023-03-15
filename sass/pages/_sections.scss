@@ -8,12 +8,12 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
     &--paire {
         background-color: $color-background;
-        background-image: url(/Tox-Website/images/patternpadComputer.svg);
+        background-image: url(../images/patternpadComputer.svg);
         background-repeat: repeat-y;
         background-size: 30%;
         background-position: top right;
         @include tablet-only {
-            background-image: url(/Tox-Website/images/patternpadMobileGrey.svg);
+            background-image: url(../images/patternpadMobileGrey.svg);
             background-repeat: no-repeat;
             background-size: 130vh;
             background-position: bottom;

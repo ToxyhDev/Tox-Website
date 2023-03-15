@@ -13,8 +13,8 @@ if (isset($_POST['texts'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/sass.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/sass.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
@@ -46,12 +46,13 @@ if (isset($_POST['texts'])) {
 
             <div class="maBio-blob">
                 <img class="maBio-blob__img" src="images/illustration-blob-pc.svg" alt="">
-                <p class="maBio-blob__p">Je me suis formé en autodidacte sur le site d'OpenClassrooms sur les langages HTML, CSS et JavaScript.</p>
+                <p class="maBio-blob__p">Je me suis formé en autodidacte sur le site d'OpenClassrooms, sur les langages HTML, CSS, JavaScript et récemment PHP.<br>
+                J'ai également appris à utiliser le préprocesseur Sass, afin d'avoir du code CSS plus facile à maintenir.</p>
             </div>
 
             <div class="maBio-blob">
                 <img class="maBio-blob__img" src="images/illustration-blob-cible.svg" alt="">
-                <p class="maBio-blob__p">Avec les bases enseignées je fais en sorte de réaliser le plus possible de nouveau projet afin de chercher à approfondir mes connaissances.</p>
+                <p class="maBio-blob__p">Mon objectif ! Réaliser le plus possible de nouveau projet, en cherchant toujours à intégrer des fonctionnalités qui me pousseront à apprendre des nouvelles choses.</p>
             </div>
         </section>
 
@@ -66,7 +67,7 @@ if (isset($_POST['texts'])) {
                     <h3 class="mesProjets-carousel__slide--title">Jeu le Petit BAC</h3>
                     <div class="mesProjets-carousel__slide-desc">
                         <img  class="mesProjets-carousel__slide-desc__img" src="images/illustration-interface.svg" alt="">
-                        <p class="mesProjets-carousel__slide-desc__p">C'est un site WEB qui permet de générer une lettre aléatoirement pour jouer au jeu du petit BAC.</p>
+                        <p class="mesProjets-carousel__slide-desc__p">C'est un site WEB qui permet de générer une lettre aléatoirement pour jouer au jeu du petit BAC.<br> Ce projet est le tout premier que j'ai réalisé en intégrant du JavaScript.</p>
                     </div>
                     <a class="btn" href="../jeuLePetitBac/index.html" target="_blank" rel="noopener noreferrer">Lien</a>
                 </div>
@@ -75,7 +76,8 @@ if (isset($_POST['texts'])) {
                     <h3 class="mesProjets-carousel__slide--title">Max Portfolio</h3>
                     <div class="mesProjets-carousel__slide-desc">
                         <img  class="mesProjets-carousel__slide-desc__img" src="images/illustration-portable.svg" alt="">
-                        <p class="mesProjets-carousel__slide-desc__p">Création d'un site web sous le format d'un portfolio d'images, avec la création d'une gallerie d'image qui met en valeur chaques images.</p>
+                        <p class="mesProjets-carousel__slide-desc__p">Création d'un site WEB portfolio, le site était destiné à un graphiste qui avait besoin d'afficher ses designs, dans le format d'une gallerie d'images. 
+                        Il avait également besoin d'un caroussel, pour pouvoir faire défiler plusieurs designs sur le même thème.</p>
                     </div>
                     <a class="btn" href="../MaxPortfolio/index.html" target="_blank" rel="noopener noreferrer">Lien</a>
                 </div>

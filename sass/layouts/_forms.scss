@@ -118,6 +118,7 @@
         &::placeholder {
             color: $color-font;
             font-weight: bold;
+            font-size: 2rem;
         }
         &:focus {
             outline: none;

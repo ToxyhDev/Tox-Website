@@ -23,7 +23,7 @@
             </div>
 
             <p class="forms-rgbd__text">En soumettant ce formulaire, j'accepte que les informations saisies dans ce formulaire soient exploitées, pour permettre de me recontacter, dans le cadre de la demande de contact.
-            Lien <a class="forms-rgbd__text--a" href="mentions-legales.php" target="_blank" rel="noopener noreferrer">Mentions-Légales</a>.</p>   
+            Lien <a class="forms-rgbd__text--a" href="mentions-legales.php" target="_blank" rel="noopener noreferrer">Mentions-Légales</a>.*</p>   
         </div>
 
         <p class="forms__attention">* Champs obligatoires</p>
