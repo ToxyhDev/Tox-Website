@@ -18,7 +18,7 @@
         <!-- RGBD -->
         <div class="forms-rgbd">
             <div class="forms-rgbd__case">
-                <input type="checkbox" name="rgbd" id="rgbd" required>
+                <input class="forms-rgbd__case--checkbox" type="checkbox" name="rgbd" id="rgbd" required>
                 <label for="rgbd"></label>
             </div>
 

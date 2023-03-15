@@ -260,42 +260,14 @@ h3, h4, p, a, input, select, textarea, button, li {
   clear: both;
   float: left;
 }
-.forms-rgbd__case input[type=checkbox] {
-  display: none;
-  visibility: hidden;
-}
-.forms-rgbd__case input[type=checkbox]:checked + label {
-  background: #6D9E99;
-}
-.forms-rgbd__case input[type=checkbox]:checked + label:before {
-  left: 3rem;
-}
-.forms-rgbd__case label {
-  width: 6rem;
-  height: 3rem;
-  box-sizing: border-box;
-  border: 0.3rem solid #22272E;
-  float: left;
-  border-radius: 99rem;
-  position: relative;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.forms-rgbd__case label:before {
-  transition: 0.3s ease;
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  background: #22272E;
-  left: 0.5rem;
-  top: 0.3rem;
-  box-sizing: border-box;
-  border: 0.3rem solid #22272E;
-  border-radius: 99rem;
+.forms-rgbd__case--checkbox {
+  accent-color: #6D9E99;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 3rem;
 }
 .forms-rgbd__text {
-  flex: 8;
   font-size: 1.5rem;
 }
 .forms-rgbd__text--a {

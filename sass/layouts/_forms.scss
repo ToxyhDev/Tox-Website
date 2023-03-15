@@ -58,48 +58,15 @@
             position: relative;
             clear: both;
             float: left;
-
-            input[type="checkbox"] {
-                display: none;
-                visibility: hidden;
-
-                &:checked + label {
-                    background: $color-valid;
-
-                    &:before {
-                        left: calc($checkbox-width / 2);
-                    }
-                }
-            }
-
-            label {
-                width: $checkbox-width;
-                height: calc($checkbox-width / 2);
-                box-sizing: border-box;
-                border: $checkbox-border;
-                float: left;
-                border-radius: 99rem;
-                position: relative;
-                cursor: pointer;
-                transition: .3s ease;
-
-                &:before {
-                    transition: .3s ease;
-                    content: '';
-                    width: calc($checkbox-width / 2) - 1rem;
-                    height: calc($checkbox-width / 2) - 1rem;
-                    position: absolute;
-                    background: $color-font;
-                    left: 0.5rem;
-                    top: 0.3rem;
-                    box-sizing: border-box;
-                    border: $checkbox-border;
-                    border-radius: 99rem;
-                }
+            &--checkbox {
+                accent-color: $color-valid;
+                display: block;
+                width: 2.5rem;
+                height: 2.5rem;
+                margin-right: 3rem;
             }
         }
         &__text {
-            flex: 8;
             font-size: 1.5rem;
             &--a {
                 font-size: 1.5rem;
