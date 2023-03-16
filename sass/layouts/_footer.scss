@@ -6,10 +6,14 @@
     align-items: center;
     text-align: center;
     background-color: $color-white;
+    &__symbol {
+        font-size: $footer-font-size;
+    }
     &__date {
         font-weight: bold; 
     }
     &__link {
         text-decoration: underline 1px;
+        font-size: $footer-font-size;
     }
 }

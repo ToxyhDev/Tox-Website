@@ -16,20 +16,23 @@
         gap: 5rem;
 
         -ms-text-overflow-style: none;
+        scrollbar-width: none;
 
         @include mobile-only {
             width: 100%;
-            height: 70%;
+            height: auto;
             flex-direction: row;
             scroll-snap-type: x mandatory;
         }
         &::-webkit-scrollbar {
             display: none;
+            
         }
 
         &__slide {
             flex: 0 0 60%;
             padding: 4rem;
+            min-height: 60vh;
         
             border: 0px solid $color-font;
             border-radius: 4rem;
@@ -52,14 +55,14 @@
             }
 
             &:first-child {
-                margin-top: 10%;
+                margin-top: 5%;
                 @include mobile-only {
                     margin: 0;
                     margin-left: 10%;
                 }
             }
             &:last-child {
-                margin-bottom: 10%;
+                margin-bottom: 5%;
                 @include mobile-only {
                     margin: 0;
                     margin-right: 10%;
@@ -78,7 +81,7 @@
 
             &-desc {
                 width: 90%;
-                height: 80%;
+                min-height: 80%;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;

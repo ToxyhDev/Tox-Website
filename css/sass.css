@@ -87,7 +87,7 @@ h2 {
 
 h3, h4, p, a, input, select, textarea, button, li {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .navbar {
@@ -131,6 +131,7 @@ h3, h4, p, a, input, select, textarea, button, li {
 }
 .socialNetworks--icon {
   display: flex;
+  width: 4rem;
   height: 4rem;
 }
 
@@ -260,42 +261,14 @@ h3, h4, p, a, input, select, textarea, button, li {
   clear: both;
   float: left;
 }
-.forms-rgbd__case input[type=checkbox] {
-  display: none;
-  visibility: hidden;
-}
-.forms-rgbd__case input[type=checkbox]:checked + label {
-  background: #6D9E99;
-}
-.forms-rgbd__case input[type=checkbox]:checked + label:before {
-  left: 3rem;
-}
-.forms-rgbd__case label {
-  width: 6rem;
-  height: 3rem;
-  box-sizing: border-box;
-  border: 0.3rem solid #22272E;
-  float: left;
-  border-radius: 99rem;
-  position: relative;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.forms-rgbd__case label:before {
-  transition: 0.3s ease;
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  background: #22272E;
-  left: 0.5rem;
-  top: 0.3rem;
-  box-sizing: border-box;
-  border: 0.3rem solid #22272E;
-  border-radius: 99rem;
+.forms-rgbd__case--checkbox {
+  accent-color: #6D9E99;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 3rem;
 }
 .forms-rgbd__text {
-  flex: 8;
   font-size: 1.5rem;
 }
 .forms-rgbd__text--a {
@@ -313,6 +286,8 @@ h3, h4, p, a, input, select, textarea, button, li {
 .forms--input::placeholder {
   color: #22272E;
   font-weight: bold;
+  font-size: 2rem;
+  opacity: 1;
 }
 .forms--input:focus {
   outline: none;
@@ -391,11 +366,15 @@ h3, h4, p, a, input, select, textarea, button, li {
   text-align: center;
   background-color: #FBFBFB;
 }
+.copyright__symbol {
+  font-size: 2rem;
+}
 .copyright__date {
   font-weight: bold;
 }
 .copyright__link {
   text-decoration: underline 1px;
+  font-size: 2rem;
 }
 
 .rgbd-header {
@@ -472,14 +451,14 @@ h3, h4, p, a, input, select, textarea, button, li {
 }
 .sections--paire {
   background-color: #FCF6EA;
-  background-image: url(/Tox-Website/images/patternpadComputer.svg);
+  background-image: url(../images/patternpadComputer.svg);
   background-repeat: repeat-y;
   background-size: 30%;
   background-position: top right;
 }
 @media screen and (max-width: 769px) {
   .sections--paire {
-    background-image: url(/Tox-Website/images/patternpadMobileGrey.svg);
+    background-image: url(../images/patternpadMobileGrey.svg);
     background-repeat: no-repeat;
     background-size: 130vh;
     background-position: bottom;
@@ -583,11 +562,12 @@ h3, h4, p, a, input, select, textarea, button, li {
   scroll-behavior: smooth;
   gap: 5rem;
   -ms-text-overflow-style: none;
+  scrollbar-width: none;
 }
 @media screen and (max-width: 426px) {
   .mesProjets-carousel {
     width: 100%;
-    height: 70%;
+    height: auto;
     flex-direction: row;
     scroll-snap-type: x mandatory;
   }
@@ -598,6 +578,7 @@ h3, h4, p, a, input, select, textarea, button, li {
 .mesProjets-carousel__slide {
   flex: 0 0 60%;
   padding: 4rem;
+  min-height: 60vh;
   border: 0px solid #22272E;
   border-radius: 4rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
@@ -614,7 +595,7 @@ h3, h4, p, a, input, select, textarea, button, li {
   }
 }
 .mesProjets-carousel__slide:first-child {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 @media screen and (max-width: 426px) {
   .mesProjets-carousel__slide:first-child {
@@ -623,7 +604,7 @@ h3, h4, p, a, input, select, textarea, button, li {
   }
 }
 .mesProjets-carousel__slide:last-child {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 @media screen and (max-width: 426px) {
   .mesProjets-carousel__slide:last-child {
@@ -642,7 +623,7 @@ h3, h4, p, a, input, select, textarea, button, li {
 }
 .mesProjets-carousel__slide-desc {
   width: 90%;
-  height: 80%;
+  min-height: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;

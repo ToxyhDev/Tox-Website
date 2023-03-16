@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./sass/main.scss:./css/sass.css",
+    "prefix-sass": "postcss css/sass.css -o css/style.prefix.css --use autoprefixer",
 
     "compile-sass": "sass ./sass/main.scss:./css/compressed/sass.compile.css --style compressed",
     "prefix-css": "postcss css/compressed/sass.compile.css -o css/style.css --use autoprefixer"
