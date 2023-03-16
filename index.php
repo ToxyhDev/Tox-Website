@@ -23,6 +23,7 @@ if (isset($_POST['texts'])) {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon-16x16.png" type="image/x-icon">
     <title>Tox Dev-Web</title>
 </head>
 <body>
