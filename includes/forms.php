@@ -35,8 +35,14 @@
 
 
 <?php elseif(isset($_POST['email']) || isset($_POST['title'])): ?>
-    <!-- Reponse reception formulaire -->
     <?php
+        if (isset($_POST['texts'])) {
+            $entete  = 'MIME-Version: 1.0' . "\r\n";
+            $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+            $entete .= 'From: contact@tox-dev.fr' . "\r\n";
+            $entete .= 'Reply-to: ' . $_POST['email'];
+        }
+
         echo("<script type='text/javascript'>document.location.replace('index.php#meContacter');</script>");
         $email = $_POST['email'];
         $title = $_POST['title'];
@@ -50,7 +56,30 @@
             $rgbdMsg = "Vous n'avez pas accepté les mentions légales !";
         }
 
-        $sendMail = mail('toxyhgaming@gmail.com', $title, $message, $rgbdMsg, $entete);
+        $messages = '<style>
+        h1 {
+            font-size: 34px;
+            color: #6D9E99;
+            font-weight: bold;
+        }
+        span {
+            color: #6D9E99;
+        }
+        h2 {
+            font-size: 16px;
+        }
+        p {
+            color: #22272E;
+            font-size: 16px;
+        }
+        </style>
+        <h1>Tox-dev.fr</h1> <br>
+        <h2>Message envoyé depuis le formulaire de contact de <span>tox-dev.fr</span></h2>
+        <p><b>Email: </b>' . $email . '<br>
+        <b>Consentement: </b>' . $rgbdMsg . '<br>
+        <b>Messages: </b>' . htmlspecialchars($message) . '</p>';
+
+        $sendMail = mail('contact@tox-dev.fr', $title, $messages, $entete);
     ?>
 
 <section class="forms-response">
@@ -66,10 +95,10 @@
                 Email: </span>' . $email; ?></p>
             <p class="forms-response__infoValid--body">
                 <?php echo '<span class="forms-response__infoValid--span">
-                Objet: </span>' . $title; ?></p>
+                Objet: </span>' . strip_tags($title); ?></p>
             <p class="forms-response__infoValid--body">
                 <?php echo '<span class="forms-response__infoValid--span">
-                Message: </span>' . $message; ?></p>
+                Message: </span>' . strip_tags($message); ?></p>
             <p class="forms-response__infoValid--body">
                 <?php echo '<span class="forms-response__infoValid--span">
                 Consentement: </span>' . $rgbdMsg; ?></p>

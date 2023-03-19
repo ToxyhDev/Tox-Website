@@ -1,12 +1,3 @@
-<?php
-if (isset($_POST['texts'])) {
-    $entete  = 'MIME-Version: 1.0' . "\r\n";
-    $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-    $entete .= 'From: toxyhgaming@gmail.com' . "\r\n";
-    $entete .= 'Reply-to: ' . $_POST['email'];
-}
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -56,7 +47,7 @@ if (isset($_POST['texts'])) {
 
             <div class="maBio-blob">
                 <img class="maBio-blob__img" src="images/illustration-blob-cible.svg" alt="">
-                <p class="maBio-blob__p">Mon objectif ! Réaliser le plus possible de nouveau projet, en cherchant toujours à intégrer des fonctionnalités qui me pousseront à apprendre des nouvelles choses.</p>
+                <p class="maBio-blob__p">Mon objectif ! Réaliser le plus possible des nouveaux projets, en cherchant toujours à intégrer des fonctionnalités qui me pousseront à apprendre des nouvelles choses.</p>
             </div>
         </section>
 
@@ -73,7 +64,7 @@ if (isset($_POST['texts'])) {
                         <img  class="mesProjets-carousel__slide-desc__img" src="images/illustration-interface.svg" alt="">
                         <p class="mesProjets-carousel__slide-desc__p">C'est un site WEB qui permet de générer une lettre aléatoirement pour jouer au jeu du petit BAC.<br> Ce projet est le tout premier que j'ai réalisé en intégrant du JavaScript.</p>
                     </div>
-                    <a class="btn" href="../jeuLePetitBac/index.html" target="_blank" rel="noopener noreferrer">Lien</a>
+                    <a class="btn" href="https://lepetitbac.tox-dev.fr" target="_blank" rel="noopener noreferrer">Lien</a>
                 </div>
 
                 <div class="mesProjets-carousel__slide">
@@ -83,7 +74,7 @@ if (isset($_POST['texts'])) {
                         <p class="mesProjets-carousel__slide-desc__p">Création d'un site WEB portfolio, le site était destiné à un graphiste qui avait besoin d'afficher ses designs, dans le format d'une gallerie d'images. 
                         Il avait également besoin d'un caroussel, pour pouvoir faire défiler plusieurs designs sur le même thème.</p>
                     </div>
-                    <a class="btn" href="../MaxPortfolio/index.html" target="_blank" rel="noopener noreferrer">Lien</a>
+                    <a class="btn" href="https://maxportfolio.tox-dev.fr" target="_blank" rel="noopener noreferrer">Lien</a>
                 </div>
 
             </section>

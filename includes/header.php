@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <a href="index.php" class="navbar-name"><h1>TOX</h1></a>
+    <a href="https://tox-dev.fr" class="navbar-name"><h1>TOX</h1></a>
 
     <section class="socialNetworks">
         <a class="socialNetworks--icon" href="https://twitter.com/SuperToxyh" target="_blank">
@@ -21,9 +21,9 @@
 
     <div class="menu">
         <ul class="menu-list">
-            <li><a href="index.php#maBio">MA BIO</a></li>
-            <li><a href="index.php#mesProjets">MES PROJETS</a></li>
-            <li><a href="index.php#meContacter">ME CONTACTER</a></li>
+            <li><a href="https://tox-dev.fr/#maBio">MA BIO</a></li>
+            <li><a href="https://tox-dev.fr/#mesProjets">MES PROJETS</a></li>
+            <li><a href="https://tox-dev.fr/#meContacter">ME CONTACTER</a></li>
         </ul>
     </div>
 
