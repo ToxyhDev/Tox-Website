@@ -23,6 +23,7 @@
             height: auto;
             flex-direction: row;
             scroll-snap-type: x mandatory;
+            scroll-behavior: auto;
         }
         &::-webkit-scrollbar {
             display: none;
